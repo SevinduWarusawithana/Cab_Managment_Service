@@ -62,6 +62,7 @@
             this.viewOrderBtn.TabIndex = 2;
             this.viewOrderBtn.Text = "View Order";
             this.viewOrderBtn.UseVisualStyleBackColor = true;
+            this.viewOrderBtn.Click += new System.EventHandler(this.viewOrderBtn_Click);
             // 
             // manageDriverBtn
             // 
@@ -72,6 +73,7 @@
             this.manageDriverBtn.TabIndex = 3;
             this.manageDriverBtn.Text = "Manage Drivers";
             this.manageDriverBtn.UseVisualStyleBackColor = true;
+            this.manageDriverBtn.Click += new System.EventHandler(this.manageDriverBtn_Click);
             // 
             // manageCarsBtn
             // 
@@ -82,6 +84,7 @@
             this.manageCarsBtn.TabIndex = 4;
             this.manageCarsBtn.Text = "Manage Cars";
             this.manageCarsBtn.UseVisualStyleBackColor = true;
+            this.manageCarsBtn.Click += new System.EventHandler(this.manageCarsBtn_Click);
             // 
             // adminDashboard
             // 

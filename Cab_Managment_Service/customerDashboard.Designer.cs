@@ -45,6 +45,7 @@
             this.viewAvailableCarBtn.TabIndex = 9;
             this.viewAvailableCarBtn.Text = "View ";
             this.viewAvailableCarBtn.UseVisualStyleBackColor = true;
+            this.viewAvailableCarBtn.Click += new System.EventHandler(this.viewAvailableCarBtn_Click);
             // 
             // viewAvailableDriverBtn
             // 
@@ -55,6 +56,7 @@
             this.viewAvailableDriverBtn.TabIndex = 8;
             this.viewAvailableDriverBtn.Text = "View";
             this.viewAvailableDriverBtn.UseVisualStyleBackColor = true;
+            this.viewAvailableDriverBtn.Click += new System.EventHandler(this.viewAvailableDriverBtn_Click);
             // 
             // newOrderBtn
             // 

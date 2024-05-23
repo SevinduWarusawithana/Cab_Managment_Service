@@ -1,4 +1,6 @@
-﻿namespace Cab_Managment_Service
+﻿using System;
+
+namespace Cab_Managment_Service
 {
     partial class AvailableDriversScreen
     {
@@ -54,6 +56,7 @@
             this.goToPlaceOrderScreenBtn.TabIndex = 12;
             this.goToPlaceOrderScreenBtn.Text = "Go";
             this.goToPlaceOrderScreenBtn.UseVisualStyleBackColor = true;
+            this.goToPlaceOrderScreenBtn.Click += new System.EventHandler(this.goToPlaceOrderScreenBtn_Click);
             // 
             // textBox1
             // 
@@ -100,6 +103,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

@@ -16,5 +16,26 @@ namespace Cab_Managment_Service
         {
             InitializeComponent();
         }
+
+        private void manageCarsBtn_Click(object sender, EventArgs e)
+        {
+            CarManagementScreen screen = new CarManagementScreen();
+            screen.Show();
+            this.Hide();
+        }
+
+        private void manageDriverBtn_Click(object sender, EventArgs e)
+        {
+            DriverManagementScreen screen = new DriverManagementScreen();
+            screen.Show();
+            this.Hide();
+        }
+
+        private void viewOrderBtn_Click(object sender, EventArgs e)
+        {
+            OrdersScreen screen = new OrdersScreen();
+            screen.Show();
+            this.Hide();
+        }
     }
 }

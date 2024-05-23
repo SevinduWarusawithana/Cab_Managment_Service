@@ -21,5 +21,19 @@ namespace Cab_Managment_Service
         {
 
         }
+
+        private void viewAvailableCarBtn_Click(object sender, EventArgs e)
+        {
+            AvailableCarsScreen screen = new AvailableCarsScreen();
+            screen.Show();
+            this.Hide();
+        }
+
+        private void viewAvailableDriverBtn_Click(object sender, EventArgs e)
+        {
+            AvailableDriversScreen screen = new AvailableDriversScreen();
+            screen.Show();
+            this.Hide();
+        }
     }
 }

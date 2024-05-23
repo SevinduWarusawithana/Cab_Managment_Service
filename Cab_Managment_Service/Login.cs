@@ -26,5 +26,19 @@ namespace Cab_Managment_Service
         {
 
         }
+
+        private void adminLoginBtn_Click(object sender, EventArgs e)
+        {
+            adminDashboard dashboard = new adminDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void customerLoginBtn_Click(object sender, EventArgs e)
+        {
+            customerDashboard dashboard = new customerDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

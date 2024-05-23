@@ -17,14 +17,12 @@ namespace Cab_Managment_Service
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void goToAvailbaleDriverBtn_Click(object sender, EventArgs e)
         {
-
+            AvailableDriversScreen screen = new AvailableDriversScreen();
+            screen.Show();
+            this.Hide();
         }
 
-        private void addNewCarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

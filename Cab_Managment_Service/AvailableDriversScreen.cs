@@ -17,9 +17,12 @@ namespace Cab_Managment_Service
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
+        private void goToPlaceOrderScreenBtn_Click(object sender, EventArgs e)
+        {
+            PlaceOrderScreen screen = new PlaceOrderScreen();
+            screen.Show();
+            this.Hide();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Cab_Managment_Service
+﻿using System;
+
+namespace Cab_Managment_Service
 {
     partial class AvailableCarsScreen
     {
@@ -101,6 +103,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void addNewCarBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

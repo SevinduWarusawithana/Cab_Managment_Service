@@ -97,6 +97,7 @@
             this.adminLoginBtn.Text = "Login as admin";
             this.adminLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.adminLoginBtn.UseVisualStyleBackColor = false;
+            this.adminLoginBtn.Click += new System.EventHandler(this.adminLoginBtn_Click);
             // 
             // customerLoginBtn
             // 
@@ -110,6 +111,7 @@
             this.customerLoginBtn.Text = "Login as customer";
             this.customerLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.customerLoginBtn.UseVisualStyleBackColor = false;
+            this.customerLoginBtn.Click += new System.EventHandler(this.customerLoginBtn_Click);
             // 
             // Login
             // 
