@@ -33,7 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.loginBtn = new System.Windows.Forms.Button();
+            this.adminLoginBtn = new System.Windows.Forms.Button();
+            this.customerLoginBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +61,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(272, 64);
+            this.label3.Location = new System.Drawing.Point(260, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(266, 25);
             this.label3.TabIndex = 2;
@@ -84,18 +85,31 @@
             this.passwordTextBox.Size = new System.Drawing.Size(295, 29);
             this.passwordTextBox.TabIndex = 4;
             // 
-            // loginBtn
+            // adminLoginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.loginBtn.Location = new System.Drawing.Point(344, 276);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(123, 36);
-            this.loginBtn.TabIndex = 5;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.loginBtn.UseVisualStyleBackColor = false;
+            this.adminLoginBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.adminLoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminLoginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.adminLoginBtn.Location = new System.Drawing.Point(189, 275);
+            this.adminLoginBtn.Name = "adminLoginBtn";
+            this.adminLoginBtn.Size = new System.Drawing.Size(192, 60);
+            this.adminLoginBtn.TabIndex = 5;
+            this.adminLoginBtn.Text = "Login as admin";
+            this.adminLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.adminLoginBtn.UseVisualStyleBackColor = false;
+            // 
+            // customerLoginBtn
+            // 
+            this.customerLoginBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.customerLoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerLoginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerLoginBtn.Location = new System.Drawing.Point(416, 275);
+            this.customerLoginBtn.Name = "customerLoginBtn";
+            this.customerLoginBtn.Size = new System.Drawing.Size(183, 60);
+            this.customerLoginBtn.TabIndex = 6;
+            this.customerLoginBtn.Text = "Login as customer";
+            this.customerLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.customerLoginBtn.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -103,7 +117,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.customerLoginBtn);
+            this.Controls.Add(this.adminLoginBtn);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.label3);
@@ -124,7 +139,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button adminLoginBtn;
+        private System.Windows.Forms.Button customerLoginBtn;
     }
 }
 
