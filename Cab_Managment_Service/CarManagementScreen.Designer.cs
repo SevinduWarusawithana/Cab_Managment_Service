@@ -63,6 +63,7 @@
             this.addNewCarBtn.TabIndex = 2;
             this.addNewCarBtn.Text = "Add new car";
             this.addNewCarBtn.UseVisualStyleBackColor = true;
+            this.addNewCarBtn.Click += new System.EventHandler(this.addNewCarBtn_Click);
             // 
             // viewCarBtn
             // 

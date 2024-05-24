@@ -26,5 +26,10 @@ namespace Cab_Managment_Service
         {
 
         }
+
+        private void addNewCarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
