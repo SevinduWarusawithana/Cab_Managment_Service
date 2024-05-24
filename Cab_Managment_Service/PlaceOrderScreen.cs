@@ -21,5 +21,52 @@ namespace Cab_Managment_Service
         {
 
         }
+
+        private void PlaceOrderScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addressTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastNameTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contactNumberTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goToConfirmScreenBtn_Click(object sender, EventArgs e)
+        {
+            ConfirmationScreen screen = new ConfirmationScreen();
+            screen.Show();
+            this.Hide();
+        }
     }
 }

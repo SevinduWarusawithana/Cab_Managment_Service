@@ -35,5 +35,10 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void newOrderBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please select a car first");
+        }
     }
 }

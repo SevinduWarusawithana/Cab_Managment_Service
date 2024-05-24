@@ -29,47 +29,34 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.goToConfirmScreenBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.firstNameTextbox = new System.Windows.Forms.TextBox();
-            this.lastNameTextbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.addressTextbox = new System.Windows.Forms.TextBox();
+            this.locationTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.contactNumberTextbox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.destinationTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 360);
+            this.label4.Location = new System.Drawing.Point(141, 284);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(284, 20);
             this.label4.TabIndex = 18;
             this.label4.Text = "Do you want to confirm this order :";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 20);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "First name :";
-            // 
             // goToConfirmScreenBtn
             // 
             this.goToConfirmScreenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goToConfirmScreenBtn.Location = new System.Drawing.Point(429, 352);
+            this.goToConfirmScreenBtn.Location = new System.Drawing.Point(453, 276);
             this.goToConfirmScreenBtn.Name = "goToConfirmScreenBtn";
             this.goToConfirmScreenBtn.Size = new System.Drawing.Size(161, 36);
             this.goToConfirmScreenBtn.TabIndex = 15;
             this.goToConfirmScreenBtn.Text = "Confirm";
             this.goToConfirmScreenBtn.UseVisualStyleBackColor = true;
+            this.goToConfirmScreenBtn.Click += new System.EventHandler(this.goToConfirmScreenBtn_Click);
             // 
             // label1
             // 
@@ -81,68 +68,45 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Place Order";
             // 
-            // firstNameTextbox
+            // locationTextbox
             // 
-            this.firstNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameTextbox.Location = new System.Drawing.Point(257, 115);
-            this.firstNameTextbox.Name = "firstNameTextbox";
-            this.firstNameTextbox.Size = new System.Drawing.Size(427, 26);
-            this.firstNameTextbox.TabIndex = 19;
-            // 
-            // lastNameTextbox
-            // 
-            this.lastNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTextbox.Location = new System.Drawing.Point(257, 166);
-            this.lastNameTextbox.Name = "lastNameTextbox";
-            this.lastNameTextbox.Size = new System.Drawing.Size(427, 26);
-            this.lastNameTextbox.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(98, 168);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Last name :";
-            // 
-            // addressTextbox
-            // 
-            this.addressTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextbox.Location = new System.Drawing.Point(257, 270);
-            this.addressTextbox.Name = "addressTextbox";
-            this.addressTextbox.Size = new System.Drawing.Size(427, 26);
-            this.addressTextbox.TabIndex = 25;
+            this.locationTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationTextbox.Location = new System.Drawing.Point(260, 152);
+            this.locationTextbox.Name = "locationTextbox";
+            this.locationTextbox.Size = new System.Drawing.Size(427, 26);
+            this.locationTextbox.TabIndex = 25;
+            this.locationTextbox.TextChanged += new System.EventHandler(this.addressTextbox_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(98, 272);
+            this.label5.Location = new System.Drawing.Point(101, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 20);
+            this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Address :";
+            this.label5.Text = "Location :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // contactNumberTextbox
+            // label3
             // 
-            this.contactNumberTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNumberTextbox.Location = new System.Drawing.Point(257, 219);
-            this.contactNumberTextbox.Name = "contactNumberTextbox";
-            this.contactNumberTextbox.Size = new System.Drawing.Size(427, 26);
-            this.contactNumberTextbox.TabIndex = 23;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 20);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Destination :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
+            // destinationTextbox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(98, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 20);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Contact number :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.destinationTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.destinationTextbox.Location = new System.Drawing.Point(260, 204);
+            this.destinationTextbox.Name = "destinationTextbox";
+            this.destinationTextbox.Size = new System.Drawing.Size(427, 26);
+            this.destinationTextbox.TabIndex = 19;
+            this.destinationTextbox.TextChanged += new System.EventHandler(this.firstNameTextbox_TextChanged);
             // 
             // PlaceOrderScreen
             // 
@@ -150,19 +114,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(800, 460);
-            this.Controls.Add(this.addressTextbox);
+            this.Controls.Add(this.locationTextbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.contactNumberTextbox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.lastNameTextbox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.firstNameTextbox);
+            this.Controls.Add(this.destinationTextbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.goToConfirmScreenBtn);
             this.Controls.Add(this.label1);
             this.Name = "PlaceOrderScreen";
             this.Text = "PlaceOrderScreen";
+            this.Load += new System.EventHandler(this.PlaceOrderScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,15 +132,11 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button goToConfirmScreenBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox firstNameTextbox;
-        private System.Windows.Forms.TextBox lastNameTextbox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox addressTextbox;
+        private System.Windows.Forms.TextBox locationTextbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox contactNumberTextbox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox destinationTextbox;
     }
 }

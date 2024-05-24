@@ -16,5 +16,12 @@ namespace Cab_Managment_Service
         {
             InitializeComponent();
         }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Logout screen = new Logout();
+            screen.Show();
+            this.Hide();
+        }
     }
 }
