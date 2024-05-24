@@ -32,6 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.viewOrderBtn = new System.Windows.Forms.Button();
+            this.backToAdminDashboardBtn3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,12 +50,12 @@
             this.textBox1.Location = new System.Drawing.Point(61, 75);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 307);
+            this.textBox1.Size = new System.Drawing.Size(301, 282);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(413, 163);
+            this.textBox2.Location = new System.Drawing.Point(413, 140);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(339, 216);
@@ -64,7 +65,7 @@
             // viewOrderBtn
             // 
             this.viewOrderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewOrderBtn.Location = new System.Drawing.Point(463, 94);
+            this.viewOrderBtn.Location = new System.Drawing.Point(463, 77);
             this.viewOrderBtn.Name = "viewOrderBtn";
             this.viewOrderBtn.Size = new System.Drawing.Size(227, 41);
             this.viewOrderBtn.TabIndex = 3;
@@ -72,11 +73,24 @@
             this.viewOrderBtn.UseVisualStyleBackColor = true;
             this.viewOrderBtn.Click += new System.EventHandler(this.viewOrderBtn_Click);
             // 
+            // backToAdminDashboardBtn3
+            // 
+            this.backToAdminDashboardBtn3.AutoSize = true;
+            this.backToAdminDashboardBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToAdminDashboardBtn3.Location = new System.Drawing.Point(18, 389);
+            this.backToAdminDashboardBtn3.Name = "backToAdminDashboardBtn3";
+            this.backToAdminDashboardBtn3.Size = new System.Drawing.Size(62, 42);
+            this.backToAdminDashboardBtn3.TabIndex = 24;
+            this.backToAdminDashboardBtn3.Text = "🔙";
+            this.backToAdminDashboardBtn3.Click += new System.EventHandler(this.backToAdminDashboardBtn3_Click);
+            // 
             // OrdersScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backToAdminDashboardBtn3);
             this.Controls.Add(this.viewOrderBtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -94,5 +108,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button viewOrderBtn;
+        private System.Windows.Forms.Label backToAdminDashboardBtn3;
     }
 }

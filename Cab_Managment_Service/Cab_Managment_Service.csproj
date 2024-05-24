@@ -73,6 +73,7 @@
     <Compile Include="CarManagementScreen.Designer.cs">
       <DependentUpon>CarManagementScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarManagerClass.cs" />
     <Compile Include="ConfirmationScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,7 @@
     <Compile Include="DriverManagementScreen.Designer.cs">
       <DependentUpon>DriverManagementScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="DriverManagerClass.cs" />
     <Compile Include="ErrorHandlingScreen.cs">
       <SubType>Form</SubType>
     </Compile>

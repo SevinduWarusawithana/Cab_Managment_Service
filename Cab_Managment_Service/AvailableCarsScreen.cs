@@ -23,5 +23,12 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void backToCustomerDashboardBtn1_Click(object sender, EventArgs e)
+        {
+            customerDashboard screen = new customerDashboard();
+            screen.Show();
+            this.Hide();
+        }
     }
 }

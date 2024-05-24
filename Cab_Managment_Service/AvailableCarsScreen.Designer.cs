@@ -33,6 +33,7 @@
             this.goToAvailableDriverScreenBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.backToCustomerDashboardBtn1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -84,12 +85,24 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Available car";
             // 
+            // backToCustomerDashboardBtn1
+            // 
+            this.backToCustomerDashboardBtn1.AutoSize = true;
+            this.backToCustomerDashboardBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToCustomerDashboardBtn1.Location = new System.Drawing.Point(23, 383);
+            this.backToCustomerDashboardBtn1.Name = "backToCustomerDashboardBtn1";
+            this.backToCustomerDashboardBtn1.Size = new System.Drawing.Size(62, 42);
+            this.backToCustomerDashboardBtn1.TabIndex = 25;
+            this.backToCustomerDashboardBtn1.Text = "🔙";
+            this.backToCustomerDashboardBtn1.Click += new System.EventHandler(this.backToCustomerDashboardBtn1_Click);
+            // 
             // AvailableCarsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backToCustomerDashboardBtn1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectCarBtn);
             this.Controls.Add(this.goToAvailableDriverScreenBtn);
@@ -109,5 +122,6 @@
         private System.Windows.Forms.Button goToAvailableDriverScreenBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label backToCustomerDashboardBtn1;
     }
 }

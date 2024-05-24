@@ -35,6 +35,7 @@ namespace Cab_Managment_Service
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.backToAvailableCarsScreenBtn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // selectDriverBtn
@@ -87,12 +88,24 @@ namespace Cab_Managment_Service
             this.label2.Text = "Go to place order :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // backToAvailableCarsScreenBtn
+            // 
+            this.backToAvailableCarsScreenBtn.AutoSize = true;
+            this.backToAvailableCarsScreenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToAvailableCarsScreenBtn.Location = new System.Drawing.Point(19, 383);
+            this.backToAvailableCarsScreenBtn.Name = "backToAvailableCarsScreenBtn";
+            this.backToAvailableCarsScreenBtn.Size = new System.Drawing.Size(62, 42);
+            this.backToAvailableCarsScreenBtn.TabIndex = 26;
+            this.backToAvailableCarsScreenBtn.Text = "🔙";
+            this.backToAvailableCarsScreenBtn.Click += new System.EventHandler(this.backToAvailableCarsScreenBtn_Click);
+            // 
             // AvailableDriversScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backToAvailableCarsScreenBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectDriverBtn);
             this.Controls.Add(this.goToPlaceOrderScreenBtn);
@@ -116,5 +129,6 @@ namespace Cab_Managment_Service
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label backToAvailableCarsScreenBtn;
     }
 }

@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.destinationTextbox = new System.Windows.Forms.TextBox();
+            this.backToAvailableDriverScreenBtn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -108,12 +109,24 @@
             this.destinationTextbox.TabIndex = 19;
             this.destinationTextbox.TextChanged += new System.EventHandler(this.firstNameTextbox_TextChanged);
             // 
+            // backToAvailableDriverScreenBtn
+            // 
+            this.backToAvailableDriverScreenBtn.AutoSize = true;
+            this.backToAvailableDriverScreenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToAvailableDriverScreenBtn.Location = new System.Drawing.Point(21, 389);
+            this.backToAvailableDriverScreenBtn.Name = "backToAvailableDriverScreenBtn";
+            this.backToAvailableDriverScreenBtn.Size = new System.Drawing.Size(62, 42);
+            this.backToAvailableDriverScreenBtn.TabIndex = 26;
+            this.backToAvailableDriverScreenBtn.Text = "🔙";
+            this.backToAvailableDriverScreenBtn.Click += new System.EventHandler(this.backToAvailableDriverScreenBtn_Click);
+            // 
             // PlaceOrderScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(800, 460);
+            this.Controls.Add(this.backToAvailableDriverScreenBtn);
             this.Controls.Add(this.locationTextbox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.destinationTextbox);
@@ -138,5 +151,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox destinationTextbox;
+        private System.Windows.Forms.Label backToAvailableDriverScreenBtn;
     }
 }

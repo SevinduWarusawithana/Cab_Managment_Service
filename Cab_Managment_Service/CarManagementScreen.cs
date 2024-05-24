@@ -29,7 +29,20 @@ namespace Cab_Managment_Service
 
         private void addNewCarBtn_Click(object sender, EventArgs e)
         {
+            int id = int.Parse(addingCarIdTxt.Text);
+            string name = addingCarNameTxt.Text;
+            string number = addingCarPlateNumberTxt.Text;
+            string availability = addingCarAvailabilityTxt.Text;
 
+            CarManagerClass carManager = new CarManagerClass();
+            carManager.addCar(id, name, number, true);
+        }
+
+        private void backToAdminDashboardBtn1_Click(object sender, EventArgs e)
+        {
+            adminDashboard dashboard = new adminDashboard();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

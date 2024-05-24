@@ -26,5 +26,12 @@ namespace Cab_Managment_Service
         {
 
         }
+
+        private void backToAdminDashboardBtn3_Click(object sender, EventArgs e)
+        {
+            adminDashboard dashboard = new adminDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

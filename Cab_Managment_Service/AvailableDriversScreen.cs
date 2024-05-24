@@ -24,5 +24,12 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void backToAvailableCarsScreenBtn_Click(object sender, EventArgs e)
+        {
+            AvailableCarsScreen screen = new AvailableCarsScreen();
+            screen.Show();
+            this.Hide();
+        }
     }
 }

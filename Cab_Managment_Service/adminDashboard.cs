@@ -37,5 +37,10 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

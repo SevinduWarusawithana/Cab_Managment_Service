@@ -21,5 +21,28 @@ namespace Cab_Managment_Service
         {
 
         }
+
+        private void addNewDriverBtn_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(addingDriverIdTxt.Text);
+            string name = addingDriverNameTxt.Text;
+            string phone = addingDriverContactTxt.Text;
+            string availability = addingDriverAvailablityCombo.Text;
+
+            DriverManagerClass driverManager = new DriverManagerClass();
+            driverManager.addDriver(id, name, phone, true);
+        }
+
+        private void addingDriverAvailablityTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backToAdminDashboardBtn2_Click(object sender, EventArgs e)
+        {
+            adminDashboard dashboard = new adminDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }
