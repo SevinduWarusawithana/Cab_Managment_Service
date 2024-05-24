@@ -71,7 +71,7 @@
             // locationTextbox
             // 
             this.locationTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTextbox.Location = new System.Drawing.Point(260, 152);
+            this.locationTextbox.Location = new System.Drawing.Point(259, 121);
             this.locationTextbox.Name = "locationTextbox";
             this.locationTextbox.Size = new System.Drawing.Size(427, 26);
             this.locationTextbox.TabIndex = 25;
@@ -81,7 +81,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(101, 154);
+            this.label5.Location = new System.Drawing.Point(100, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 24;
@@ -92,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 206);
+            this.label3.Location = new System.Drawing.Point(100, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 17;
@@ -102,7 +102,7 @@
             // destinationTextbox
             // 
             this.destinationTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.destinationTextbox.Location = new System.Drawing.Point(260, 204);
+            this.destinationTextbox.Location = new System.Drawing.Point(259, 173);
             this.destinationTextbox.Name = "destinationTextbox";
             this.destinationTextbox.Size = new System.Drawing.Size(427, 26);
             this.destinationTextbox.TabIndex = 19;
