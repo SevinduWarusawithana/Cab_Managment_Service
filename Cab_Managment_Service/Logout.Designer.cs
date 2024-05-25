@@ -54,6 +54,7 @@
             this.yesBtn.TabIndex = 1;
             this.yesBtn.Text = "Yes";
             this.yesBtn.UseVisualStyleBackColor = false;
+            this.yesBtn.Click += new System.EventHandler(this.yesBtn_Click);
             // 
             // noBtn
             // 

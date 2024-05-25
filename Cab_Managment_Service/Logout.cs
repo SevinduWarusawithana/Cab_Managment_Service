@@ -16,5 +16,10 @@ namespace Cab_Managment_Service
         {
             InitializeComponent();
         }
+
+        private void yesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

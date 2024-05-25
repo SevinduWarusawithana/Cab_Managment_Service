@@ -36,13 +36,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.destinationTextbox = new System.Windows.Forms.TextBox();
             this.backToAvailableDriverScreenBtn = new System.Windows.Forms.Label();
+            this.finishBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(141, 284);
+            this.label4.Location = new System.Drawing.Point(153, 329);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(284, 20);
             this.label4.TabIndex = 18;
@@ -51,7 +54,7 @@
             // goToConfirmScreenBtn
             // 
             this.goToConfirmScreenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goToConfirmScreenBtn.Location = new System.Drawing.Point(453, 276);
+            this.goToConfirmScreenBtn.Location = new System.Drawing.Point(465, 321);
             this.goToConfirmScreenBtn.Name = "goToConfirmScreenBtn";
             this.goToConfirmScreenBtn.Size = new System.Drawing.Size(161, 36);
             this.goToConfirmScreenBtn.TabIndex = 15;
@@ -72,7 +75,7 @@
             // locationTextbox
             // 
             this.locationTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTextbox.Location = new System.Drawing.Point(259, 121);
+            this.locationTextbox.Location = new System.Drawing.Point(288, 147);
             this.locationTextbox.Name = "locationTextbox";
             this.locationTextbox.Size = new System.Drawing.Size(427, 26);
             this.locationTextbox.TabIndex = 25;
@@ -82,7 +85,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(100, 123);
+            this.label5.Location = new System.Drawing.Point(78, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 24;
@@ -93,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 175);
+            this.label3.Location = new System.Drawing.Point(78, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 17;
@@ -103,7 +106,7 @@
             // destinationTextbox
             // 
             this.destinationTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.destinationTextbox.Location = new System.Drawing.Point(259, 173);
+            this.destinationTextbox.Location = new System.Drawing.Point(288, 199);
             this.destinationTextbox.Name = "destinationTextbox";
             this.destinationTextbox.Size = new System.Drawing.Size(427, 26);
             this.destinationTextbox.TabIndex = 19;
@@ -120,12 +123,45 @@
             this.backToAvailableDriverScreenBtn.Text = "🔙";
             this.backToAvailableDriverScreenBtn.Click += new System.EventHandler(this.backToAvailableDriverScreenBtn_Click);
             // 
+            // finishBtn
+            // 
+            this.finishBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finishBtn.Location = new System.Drawing.Point(326, 240);
+            this.finishBtn.Name = "finishBtn";
+            this.finishBtn.Size = new System.Drawing.Size(111, 34);
+            this.finishBtn.TabIndex = 27;
+            this.finishBtn.Text = "Finish";
+            this.finishBtn.UseVisualStyleBackColor = true;
+            this.finishBtn.Click += new System.EventHandler(this.finishBtn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Date (YYYY-MM-DD) :";
+            // 
+            // dateTextbox
+            // 
+            this.dateTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTextbox.Location = new System.Drawing.Point(288, 94);
+            this.dateTextbox.Name = "dateTextbox";
+            this.dateTextbox.Size = new System.Drawing.Size(427, 26);
+            this.dateTextbox.TabIndex = 31;
+            this.dateTextbox.TextChanged += new System.EventHandler(this.dateTextbox_TextChanged);
+            // 
             // PlaceOrderScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(800, 460);
+            this.Controls.Add(this.dateTextbox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.finishBtn);
             this.Controls.Add(this.backToAvailableDriverScreenBtn);
             this.Controls.Add(this.locationTextbox);
             this.Controls.Add(this.label5);
@@ -152,5 +188,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox destinationTextbox;
         private System.Windows.Forms.Label backToAvailableDriverScreenBtn;
+        private System.Windows.Forms.Button finishBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox dateTextbox;
     }
 }

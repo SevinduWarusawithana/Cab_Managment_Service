@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Cab_Managment_Service
 {
@@ -74,6 +75,21 @@ namespace Cab_Managment_Service
             AvailableDriversScreen screen = new AvailableDriversScreen();
             screen.Show();
             this.Hide();
+        }
+
+        private void finishBtn_Click(object sender, EventArgs e)
+        {
+            string location = locationTextbox.Text;
+            string destination = destinationTextbox.Text;
+            string date = dateTextbox.Text; // Convert date to string
+
+            PlaceOrderClass orderManager = new PlaceOrderClass();
+            orderManager.addMap(location, destination, date);
+        }
+
+        private void dateTextbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

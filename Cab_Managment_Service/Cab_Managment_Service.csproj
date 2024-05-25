@@ -118,6 +118,7 @@
     <Compile Include="OrdersScreen.Designer.cs">
       <DependentUpon>OrdersScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlaceOrderClass.cs" />
     <Compile Include="PlaceOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
