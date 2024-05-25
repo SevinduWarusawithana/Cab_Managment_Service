@@ -44,5 +44,20 @@ namespace Cab_Managment_Service
             dashboard.Show();
             this.Hide();
         }
+
+        private void removeDriverBtn_Click(object sender, EventArgs e)
+        {
+            int driverId;
+
+            if (int.TryParse(addingDriverIdTxt.Text, out driverId))
+            {
+                DriverManagerClass carManager = new DriverManagerClass();
+                carManager.removeDriver(driverId);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid car ID");
+            }
+        }
     }
 }

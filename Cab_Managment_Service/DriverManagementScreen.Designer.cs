@@ -54,6 +54,7 @@
             this.removeDriverBtn.TabIndex = 9;
             this.removeDriverBtn.Text = "Remove driver";
             this.removeDriverBtn.UseVisualStyleBackColor = true;
+            this.removeDriverBtn.Click += new System.EventHandler(this.removeDriverBtn_Click);
             // 
             // viewDriverBtn
             // 

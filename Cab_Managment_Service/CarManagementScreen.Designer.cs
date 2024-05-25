@@ -94,6 +94,7 @@
             this.removeCarBtn.TabIndex = 4;
             this.removeCarBtn.Text = "Remove car";
             this.removeCarBtn.UseVisualStyleBackColor = true;
+            this.removeCarBtn.Click += new System.EventHandler(this.removeCarBtn_Click);
             // 
             // textBox2
             // 

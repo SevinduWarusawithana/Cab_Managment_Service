@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Cab_Managment_Service
 {
@@ -43,6 +44,21 @@ namespace Cab_Managment_Service
             adminDashboard dashboard = new adminDashboard();
             dashboard.Show();
             this.Hide();
+        }
+
+        private void removeCarBtn_Click(object sender, EventArgs e)
+        {
+            int carId;
+
+            if (int.TryParse(addingCarIdTxt.Text, out carId))
+            {
+                CarManagerClass carManager = new CarManagerClass();
+                carManager.removeCar(carId);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid car ID");
+            }
         }
     }
 }

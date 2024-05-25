@@ -46,5 +46,40 @@ namespace Cab_Managment_Service
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        public void removeDriver(int id)
+        {
+            string queryDelete = "DELETE FROM Driver WHERE Driver_ID = @Id";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(queryDelete, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Driver removed successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No Driver found with the specified ID");
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

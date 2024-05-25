@@ -46,5 +46,40 @@ namespace Cab_Managment_Service
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        public void removeCar(int id)
+        {
+            string queryDelete = "DELETE FROM Car WHERE Car_ID = @Id";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(queryDelete, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Car removed successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No car found with the specified ID");
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 } 
