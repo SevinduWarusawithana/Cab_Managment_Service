@@ -31,7 +31,6 @@
             this.removeDriverBtn = new System.Windows.Forms.Button();
             this.viewDriverBtn = new System.Windows.Forms.Button();
             this.addNewDriverBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.addingDriverContactTxt = new System.Windows.Forms.TextBox();
@@ -43,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.addingDriverAvailablityCombo = new System.Windows.Forms.ComboBox();
             this.backToAdminDashboardBtn2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // removeDriverBtn
@@ -76,14 +77,6 @@
             this.addNewDriverBtn.Text = "Add new driver";
             this.addNewDriverBtn.UseVisualStyleBackColor = true;
             this.addNewDriverBtn.Click += new System.EventHandler(this.addNewDriverBtn_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(421, 106);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 264);
-            this.textBox1.TabIndex = 6;
             // 
             // label1
             // 
@@ -188,12 +181,21 @@
             this.backToAdminDashboardBtn2.Text = "🔙";
             this.backToAdminDashboardBtn2.Click += new System.EventHandler(this.backToAdminDashboardBtn2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(443, 105);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(320, 265);
+            this.dataGridView1.TabIndex = 24;
+            // 
             // DriverManagementScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1063, 456);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.backToAdminDashboardBtn2);
             this.Controls.Add(this.addingDriverAvailablityCombo);
             this.Controls.Add(this.addingDriverContactTxt);
@@ -207,10 +209,10 @@
             this.Controls.Add(this.removeDriverBtn);
             this.Controls.Add(this.viewDriverBtn);
             this.Controls.Add(this.addNewDriverBtn);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "DriverManagementScreen";
             this.Text = "DriverManagementScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +223,6 @@
         private System.Windows.Forms.Button removeDriverBtn;
         private System.Windows.Forms.Button viewDriverBtn;
         private System.Windows.Forms.Button addNewDriverBtn;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox addingDriverContactTxt;
@@ -233,5 +234,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox addingDriverAvailablityCombo;
         private System.Windows.Forms.Label backToAdminDashboardBtn2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

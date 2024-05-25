@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.addNewCarBtn = new System.Windows.Forms.Button();
             this.viewCarBtn = new System.Windows.Forms.Button();
             this.removeCarBtn = new System.Windows.Forms.Button();
@@ -43,6 +42,8 @@
             this.addingCarPlateNumberTxt = new System.Windows.Forms.TextBox();
             this.addingCarAvailabilityTxt = new System.Windows.Forms.TextBox();
             this.backToAdminDashboardBtn1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,14 +55,6 @@
             this.label1.Size = new System.Drawing.Size(242, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Car Management Screen";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(455, 90);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 273);
-            this.textBox1.TabIndex = 1;
             // 
             // addNewCarBtn
             // 
@@ -188,12 +181,21 @@
             this.backToAdminDashboardBtn1.Text = "🔙";
             this.backToAdminDashboardBtn1.Click += new System.EventHandler(this.backToAdminDashboardBtn1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(428, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(359, 272);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // CarManagementScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1084, 451);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.backToAdminDashboardBtn1);
             this.Controls.Add(this.addingCarAvailabilityTxt);
             this.Controls.Add(this.addingCarPlateNumberTxt);
@@ -207,10 +209,10 @@
             this.Controls.Add(this.removeCarBtn);
             this.Controls.Add(this.viewCarBtn);
             this.Controls.Add(this.addNewCarBtn);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "CarManagementScreen";
             this.Text = "CarManagementScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,7 +221,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button addNewCarBtn;
         private System.Windows.Forms.Button viewCarBtn;
         private System.Windows.Forms.Button removeCarBtn;
@@ -233,5 +234,6 @@
         private System.Windows.Forms.TextBox addingCarPlateNumberTxt;
         private System.Windows.Forms.TextBox addingCarAvailabilityTxt;
         private System.Windows.Forms.Label backToAdminDashboardBtn1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

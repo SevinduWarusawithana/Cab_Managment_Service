@@ -30,5 +30,20 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AvailableCarsScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

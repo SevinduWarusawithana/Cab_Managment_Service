@@ -32,16 +32,19 @@ namespace Cab_Managment_Service
         {
             this.selectDriverBtn = new System.Windows.Forms.Button();
             this.goToPlaceOrderScreenBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backToAvailableCarsScreenBtn = new System.Windows.Forms.Label();
+            this.selectingDriverIdTxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // selectDriverBtn
             // 
             this.selectDriverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectDriverBtn.Location = new System.Drawing.Point(314, 309);
+            this.selectDriverBtn.Location = new System.Drawing.Point(552, 190);
             this.selectDriverBtn.Name = "selectDriverBtn";
             this.selectDriverBtn.Size = new System.Drawing.Size(189, 35);
             this.selectDriverBtn.TabIndex = 13;
@@ -51,21 +54,13 @@ namespace Cab_Managment_Service
             // goToPlaceOrderScreenBtn
             // 
             this.goToPlaceOrderScreenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goToPlaceOrderScreenBtn.Location = new System.Drawing.Point(415, 371);
+            this.goToPlaceOrderScreenBtn.Location = new System.Drawing.Point(414, 359);
             this.goToPlaceOrderScreenBtn.Name = "goToPlaceOrderScreenBtn";
             this.goToPlaceOrderScreenBtn.Size = new System.Drawing.Size(152, 35);
             this.goToPlaceOrderScreenBtn.TabIndex = 12;
             this.goToPlaceOrderScreenBtn.Text = "Go";
             this.goToPlaceOrderScreenBtn.UseVisualStyleBackColor = true;
             this.goToPlaceOrderScreenBtn.Click += new System.EventHandler(this.goToPlaceOrderScreenBtn_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(237, 61);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 230);
-            this.textBox1.TabIndex = 11;
             // 
             // label1
             // 
@@ -81,7 +76,7 @@ namespace Cab_Managment_Service
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(249, 379);
+            this.label2.Location = new System.Drawing.Point(248, 367);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 18);
             this.label2.TabIndex = 14;
@@ -99,20 +94,49 @@ namespace Cab_Managment_Service
             this.backToAvailableCarsScreenBtn.Text = "🔙";
             this.backToAvailableCarsScreenBtn.Click += new System.EventHandler(this.backToAvailableCarsScreenBtn_Click);
             // 
+            // selectingDriverIdTxt
+            // 
+            this.selectingDriverIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectingDriverIdTxt.Location = new System.Drawing.Point(552, 140);
+            this.selectingDriverIdTxt.Name = "selectingDriverIdTxt";
+            this.selectingDriverIdTxt.Size = new System.Drawing.Size(190, 26);
+            this.selectingDriverIdTxt.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(460, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Driver ID : ";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(49, 75);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(362, 232);
+            this.dataGridView1.TabIndex = 33;
+            // 
             // AvailableDriversScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.selectingDriverIdTxt);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.backToAvailableCarsScreenBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectDriverBtn);
             this.Controls.Add(this.goToPlaceOrderScreenBtn);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "AvailableDriversScreen";
             this.Text = "AvailableDriversScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,9 +150,11 @@ namespace Cab_Managment_Service
         #endregion
         private System.Windows.Forms.Button selectDriverBtn;
         private System.Windows.Forms.Button goToPlaceOrderScreenBtn;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label backToAvailableCarsScreenBtn;
+        private System.Windows.Forms.TextBox selectingDriverIdTxt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
