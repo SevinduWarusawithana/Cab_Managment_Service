@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Cab_Managment_Service
 {
@@ -44,6 +45,14 @@ namespace Cab_Managment_Service
         private void AvailableCarsScreen_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void selectCarBtn_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(selectingCarIdTxt.Text);
+
+            AvailableCarsClass driverManager = new AvailableCarsClass();
+            driverManager.selectCar(id);
         }
     }
 }

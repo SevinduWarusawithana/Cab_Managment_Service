@@ -50,6 +50,7 @@ namespace Cab_Managment_Service
             this.selectDriverBtn.TabIndex = 13;
             this.selectDriverBtn.Text = "Selected this driver";
             this.selectDriverBtn.UseVisualStyleBackColor = true;
+            this.selectDriverBtn.Click += new System.EventHandler(this.selectDriverBtn_Click);
             // 
             // goToPlaceOrderScreenBtn
             // 

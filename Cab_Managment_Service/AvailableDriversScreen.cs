@@ -31,5 +31,13 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void selectDriverBtn_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(selectingDriverIdTxt.Text);
+
+            AvailabaleDriversClass driverManager = new AvailabaleDriversClass();
+            driverManager.selectDriver(id);
+        }
     }
 }

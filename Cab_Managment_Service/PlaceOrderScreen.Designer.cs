@@ -126,7 +126,7 @@
             // finishBtn
             // 
             this.finishBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finishBtn.Location = new System.Drawing.Point(326, 240);
+            this.finishBtn.Location = new System.Drawing.Point(604, 249);
             this.finishBtn.Name = "finishBtn";
             this.finishBtn.Size = new System.Drawing.Size(111, 34);
             this.finishBtn.TabIndex = 27;

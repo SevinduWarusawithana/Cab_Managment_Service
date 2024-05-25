@@ -58,6 +58,7 @@
             this.selectCarBtn.TabIndex = 18;
             this.selectCarBtn.Text = "Selected this car";
             this.selectCarBtn.UseVisualStyleBackColor = true;
+            this.selectCarBtn.Click += new System.EventHandler(this.selectCarBtn_Click);
             // 
             // goToAvailableDriverScreenBtn
             // 

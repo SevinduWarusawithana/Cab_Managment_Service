@@ -55,6 +55,8 @@
     <Compile Include="adminDashboard.Designer.cs">
       <DependentUpon>adminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AvailabaleDriversClass.cs" />
+    <Compile Include="AvailableCarsClass.cs" />
     <Compile Include="AvailableCarsScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +88,6 @@
     <Compile Include="customerDashboard.Designer.cs">
       <DependentUpon>customerDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="dbConnector.cs" />
     <Compile Include="DriverManagementScreen.cs">
       <SubType>Form</SubType>
     </Compile>
