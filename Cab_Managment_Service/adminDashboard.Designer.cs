@@ -33,6 +33,7 @@
             this.manageDriverBtn = new System.Windows.Forms.Button();
             this.manageCarsBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.backToLoginBtn1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,11 +83,22 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 72);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(398, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(416, 264);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // backToLoginBtn1
+            // 
+            this.backToLoginBtn1.AutoSize = true;
+            this.backToLoginBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToLoginBtn1.Location = new System.Drawing.Point(24, 387);
+            this.backToLoginBtn1.Name = "backToLoginBtn1";
+            this.backToLoginBtn1.Size = new System.Drawing.Size(62, 42);
+            this.backToLoginBtn1.TabIndex = 24;
+            this.backToLoginBtn1.Text = "🔙";
+            this.backToLoginBtn1.Click += new System.EventHandler(this.backToLoginBtn1_Click);
             // 
             // adminDashboard
             // 
@@ -94,6 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backToLoginBtn1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.manageCarsBtn);
             this.Controls.Add(this.manageDriverBtn);
@@ -114,5 +127,6 @@
         private System.Windows.Forms.Button manageDriverBtn;
         private System.Windows.Forms.Button manageCarsBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label backToLoginBtn1;
     }
 }

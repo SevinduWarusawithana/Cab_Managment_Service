@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.backToLoginBtn2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // viewAvailableCarBtn
@@ -99,12 +100,24 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Available drivers :";
             // 
+            // backToLoginBtn2
+            // 
+            this.backToLoginBtn2.AutoSize = true;
+            this.backToLoginBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToLoginBtn2.Location = new System.Drawing.Point(26, 382);
+            this.backToLoginBtn2.Name = "backToLoginBtn2";
+            this.backToLoginBtn2.Size = new System.Drawing.Size(62, 42);
+            this.backToLoginBtn2.TabIndex = 24;
+            this.backToLoginBtn2.Text = "🔙";
+            this.backToLoginBtn2.Click += new System.EventHandler(this.backToLoginBtn2_Click);
+            // 
             // customerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backToLoginBtn2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.viewAvailableCarBtn);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label backToLoginBtn2;
     }
 }
