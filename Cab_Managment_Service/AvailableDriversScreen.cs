@@ -34,10 +34,10 @@ namespace Cab_Managment_Service
 
         private void selectDriverBtn_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(selectingDriverIdTxt.Text);
+            /*int id = int.Parse(selectingDriverIdTxt.Text);
 
             AvailabaleDriversClass driverManager = new AvailabaleDriversClass();
-            driverManager.selectDriver(id);
+            driverManager.selectDriver(id);*/
         }
     }
 }

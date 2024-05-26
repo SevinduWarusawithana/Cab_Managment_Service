@@ -49,10 +49,10 @@ namespace Cab_Managment_Service
 
         private void selectCarBtn_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(selectingCarIdTxt.Text);
+            /*int id = int.Parse(selectingCarIdTxt.Text);
 
             AvailableCarsClass driverManager = new AvailableCarsClass();
-            driverManager.selectCar(id);
+            driverManager.selectCar(id);*/
         }
     }
 }

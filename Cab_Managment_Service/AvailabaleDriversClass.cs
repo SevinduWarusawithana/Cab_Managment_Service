@@ -12,7 +12,7 @@ namespace Cab_Managment_Service
     {
         public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
-        public void selectDriver(int id)
+        /*public void selectDriver(int id)
         {
             string queryInsert = "INSERT INTO Orders (Driver_ID) VALUES (@ID)";
 
@@ -42,6 +42,6 @@ namespace Cab_Managment_Service
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
+        }*/
     }
 }
