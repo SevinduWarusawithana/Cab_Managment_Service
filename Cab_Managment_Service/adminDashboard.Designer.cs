@@ -50,7 +50,7 @@
             // viewOrderBtn
             // 
             this.viewOrderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewOrderBtn.Location = new System.Drawing.Point(542, 236);
+            this.viewOrderBtn.Location = new System.Drawing.Point(537, 276);
             this.viewOrderBtn.Name = "viewOrderBtn";
             this.viewOrderBtn.Size = new System.Drawing.Size(161, 36);
             this.viewOrderBtn.TabIndex = 2;
@@ -61,7 +61,7 @@
             // manageDriverBtn
             // 
             this.manageDriverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageDriverBtn.Location = new System.Drawing.Point(542, 153);
+            this.manageDriverBtn.Location = new System.Drawing.Point(537, 193);
             this.manageDriverBtn.Name = "manageDriverBtn";
             this.manageDriverBtn.Size = new System.Drawing.Size(161, 36);
             this.manageDriverBtn.TabIndex = 3;
@@ -72,7 +72,7 @@
             // manageCarsBtn
             // 
             this.manageCarsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageCarsBtn.Location = new System.Drawing.Point(542, 72);
+            this.manageCarsBtn.Location = new System.Drawing.Point(537, 112);
             this.manageCarsBtn.Name = "manageCarsBtn";
             this.manageCarsBtn.Size = new System.Drawing.Size(161, 36);
             this.manageCarsBtn.TabIndex = 4;
