@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="adminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +83,14 @@
     <Compile Include="ConfirmationScreen.Designer.cs">
       <DependentUpon>ConfirmationScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="customerDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="customerDashboard.Designer.cs">
       <DependentUpon>customerDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driver.cs" />
     <Compile Include="DriverManagementScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +122,7 @@
     <Compile Include="OrdersScreen.Designer.cs">
       <DependentUpon>OrdersScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
     <Compile Include="PlaceOrderClass.cs" />
     <Compile Include="PlaceOrderScreen.cs">
       <SubType>Form</SubType>
@@ -128,6 +132,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="adminDashboard.resx">
       <DependentUpon>adminDashboard.cs</DependentUpon>
     </EmbeddedResource>

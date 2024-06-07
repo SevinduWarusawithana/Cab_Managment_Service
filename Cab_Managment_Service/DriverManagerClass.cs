@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,33 @@ namespace Cab_Managment_Service
 {
     internal class DriverManagerClass
     {
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
-        public void addDriver(int id, string name, string contact, bool availability)
+        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
+        public static int addDriver(Driver driver)
         {
+            string queryInsert = @"INSERT INTO Driver (Driver_Name, Driver_Contact, Available_Driver) OUTPUT INSERTED.Driver_Id VALUES (@Name, @Contact, @Availability);";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection (connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand (queryInsert, connection))
+                    {
+                        // Adding parameters
+                        command.Parameters.AddWithValue("@Name", driver.UserName);
+                        command.Parameters.AddWithValue("@Contact", driver.UserContact);
+                        command.Parameters.AddWithValue("@Availability", driver.Availability);
+                        connection.Open();
+
+                        // Execute the command and fetch the newly created ID to create an Object
+                        int newID = Convert.ToInt32(command.ExecuteScalar());
+                        return newID;
 
 
-            string queryInsert = "INSERT INTO Driver (Driver_Name, Driver_Contact, Available_Driver) VALUES (@Name, @Contact, @Availability)";
+                    }
+                }
+            }
+
+            /*string queryInsert = "INSERT INTO Driver (Driver_Name, Driver_Contact, Available_Driver) VALUES (@Name, @Contact, @Availability)";
 
             try
             {
@@ -36,18 +58,20 @@ namespace Cab_Managment_Service
                     }
 
                 }
-            }
+            }*/
             catch (SqlException ex)
             {
                 MessageBox.Show("SQL Error: " + ex.Message);
+                return -1;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                return -1;
             }
         }
 
-        public void removeDriver(int id)
+        public static void removeDriver(int id)
         {
             string queryDelete = "DELETE FROM Driver WHERE Driver_ID = @Id";
 

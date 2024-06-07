@@ -40,9 +40,9 @@
             this.addingCarIdTxt = new System.Windows.Forms.TextBox();
             this.addingCarNameTxt = new System.Windows.Forms.TextBox();
             this.addingCarPlateNumberTxt = new System.Windows.Forms.TextBox();
-            this.addingCarAvailabilityTxt = new System.Windows.Forms.TextBox();
             this.backToAdminDashboardBtn1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.addingCarAvailablityCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,14 +162,6 @@
             this.addingCarPlateNumberTxt.Size = new System.Drawing.Size(232, 26);
             this.addingCarPlateNumberTxt.TabIndex = 12;
             // 
-            // addingCarAvailabilityTxt
-            // 
-            this.addingCarAvailabilityTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addingCarAvailabilityTxt.Location = new System.Drawing.Point(160, 197);
-            this.addingCarAvailabilityTxt.Name = "addingCarAvailabilityTxt";
-            this.addingCarAvailabilityTxt.Size = new System.Drawing.Size(232, 26);
-            this.addingCarAvailabilityTxt.TabIndex = 13;
-            // 
             // backToAdminDashboardBtn1
             // 
             this.backToAdminDashboardBtn1.AutoSize = true;
@@ -189,15 +181,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(359, 272);
             this.dataGridView1.TabIndex = 15;
             // 
+            // addingCarAvailablityCombo
+            // 
+            this.addingCarAvailablityCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addingCarAvailablityCombo.FormattingEnabled = true;
+            this.addingCarAvailablityCombo.Location = new System.Drawing.Point(160, 197);
+            this.addingCarAvailablityCombo.Name = "addingCarAvailablityCombo";
+            this.addingCarAvailablityCombo.Size = new System.Drawing.Size(232, 26);
+            this.addingCarAvailablityCombo.TabIndex = 23;
+            // 
             // CarManagementScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1084, 451);
+            this.Controls.Add(this.addingCarAvailablityCombo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.backToAdminDashboardBtn1);
-            this.Controls.Add(this.addingCarAvailabilityTxt);
             this.Controls.Add(this.addingCarPlateNumberTxt);
             this.Controls.Add(this.addingCarNameTxt);
             this.Controls.Add(this.addingCarIdTxt);
@@ -232,8 +233,8 @@
         private System.Windows.Forms.TextBox addingCarIdTxt;
         private System.Windows.Forms.TextBox addingCarNameTxt;
         private System.Windows.Forms.TextBox addingCarPlateNumberTxt;
-        private System.Windows.Forms.TextBox addingCarAvailabilityTxt;
         private System.Windows.Forms.Label backToAdminDashboardBtn1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox addingCarAvailablityCombo;
     }
 }

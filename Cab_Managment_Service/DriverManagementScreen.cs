@@ -24,13 +24,35 @@ namespace Cab_Managment_Service
 
         private void addNewDriverBtn_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(addingDriverIdTxt.Text);
             string name = addingDriverNameTxt.Text;
             string phone = addingDriverContactTxt.Text;
-            string availability = addingDriverAvailablityCombo.Text;
 
-            DriverManagerClass driverManager = new DriverManagerClass();
-            driverManager.addDriver(id, name, phone, true);
+            bool availability;
+            if (addingDriverAvailablityCombo.Text == "True")
+            {
+                availability = true;
+            }
+            else
+            {
+                availability = false;
+            }
+
+            Driver driver = new Driver(0, name, phone, availability);
+
+            int newid = DriverManagerClass.addDriver(driver);
+            if (newid >= 0)
+            {
+                MessageBox.Show("Driver added successfully! Driver ID: " + newid.ToString());
+                driver.UserId = newid;
+
+            }
+            else
+            {
+                MessageBox.Show("Error adding driver");
+                driver = (null);
+            }
+
+
         }
 
         private void addingDriverAvailablityTxt_TextChanged(object sender, EventArgs e)
@@ -51,8 +73,7 @@ namespace Cab_Managment_Service
 
             if (int.TryParse(addingDriverIdTxt.Text, out driverId))
             {
-                DriverManagerClass carManager = new DriverManagerClass();
-                carManager.removeDriver(driverId);
+                DriverManagerClass.removeDriver(driverId);
             }
             else
             {

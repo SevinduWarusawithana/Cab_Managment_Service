@@ -32,13 +32,33 @@ namespace Cab_Managment_Service
 
         private void addNewCarBtn_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(addingCarIdTxt.Text);
             string name = addingCarNameTxt.Text;
             string number = addingCarPlateNumberTxt.Text;
-            string availability = addingCarAvailabilityTxt.Text;
 
-            CarManagerClass carManager = new CarManagerClass();
-            carManager.addCar(id, name, number, true);
+            bool availability;
+            if (addingCarAvailablityCombo.Text == "True")
+            {
+                availability = true;
+            }
+            else
+            {
+                availability = false;
+            }
+
+            Vehicle vehicle = new Vehicle(0, name, number, availability);
+
+            int newid = CarManagerClass.addCar(vehicle);
+            if (newid >= 0)
+            {
+                MessageBox.Show("Car added successfully! Car ID: " + newid.ToString());
+                vehicle.Vehicle_Id = newid;
+
+            }
+            else
+            {
+                MessageBox.Show("Error adding car");
+                vehicle = (null);
+            }
         }
 
         private void backToAdminDashboardBtn1_Click(object sender, EventArgs e)
@@ -54,8 +74,7 @@ namespace Cab_Managment_Service
 
             if (int.TryParse(addingCarIdTxt.Text, out carId))
             {
-                CarManagerClass carManager = new CarManagerClass();
-                carManager.removeCar(carId);
+                CarManagerClass.removeCar(carId);
             }
             else
             {
