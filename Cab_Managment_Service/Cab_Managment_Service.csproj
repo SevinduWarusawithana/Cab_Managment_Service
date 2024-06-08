@@ -56,20 +56,15 @@
     <Compile Include="adminDashboard.Designer.cs">
       <DependentUpon>adminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminManager.cs" />
+    <Compile Include="AdminSignupScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSignupScreen.Designer.cs">
+      <DependentUpon>AdminSignupScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="AvailabaleDriversClass.cs" />
     <Compile Include="AvailableCarsClass.cs" />
-    <Compile Include="AvailableCarsScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AvailableCarsScreen.Designer.cs">
-      <DependentUpon>AvailableCarsScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AvailableDriversScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AvailableDriversScreen.Designer.cs">
-      <DependentUpon>AvailableDriversScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="CarManagementScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +84,13 @@
     </Compile>
     <Compile Include="customerDashboard.Designer.cs">
       <DependentUpon>customerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManager.cs" />
+    <Compile Include="CustomerSignupScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSignupScreen.Designer.cs">
+      <DependentUpon>CustomerSignupScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Driver.cs" />
     <Compile Include="DriverManagementScreen.cs">
@@ -116,6 +118,13 @@
     <Compile Include="Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyOrders.Designer.cs">
+      <DependentUpon>MyOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="OrdersScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,15 +141,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAuthentication.cs" />
     <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="adminDashboard.resx">
       <DependentUpon>adminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AvailableCarsScreen.resx">
-      <DependentUpon>AvailableCarsScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AvailableDriversScreen.resx">
-      <DependentUpon>AvailableDriversScreen.cs</DependentUpon>
+    <EmbeddedResource Include="AdminSignupScreen.resx">
+      <DependentUpon>AdminSignupScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarManagementScreen.resx">
       <DependentUpon>CarManagementScreen.cs</DependentUpon>
@@ -151,6 +158,9 @@
     <EmbeddedResource Include="customerDashboard.resx">
       <DependentUpon>customerDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSignupScreen.resx">
+      <DependentUpon>CustomerSignupScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DriverManagementScreen.resx">
       <DependentUpon>DriverManagementScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyOrders.resx">
+      <DependentUpon>MyOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdersScreen.resx">
       <DependentUpon>OrdersScreen.cs</DependentUpon>

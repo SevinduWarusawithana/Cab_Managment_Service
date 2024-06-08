@@ -35,6 +35,8 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.adminLoginBtn = new System.Windows.Forms.Button();
             this.customerLoginBtn = new System.Windows.Forms.Button();
+            this.customerSignupBtn = new System.Windows.Forms.Button();
+            this.adminSignupBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -113,12 +115,42 @@
             this.customerLoginBtn.UseVisualStyleBackColor = false;
             this.customerLoginBtn.Click += new System.EventHandler(this.customerLoginBtn_Click);
             // 
+            // customerSignupBtn
+            // 
+            this.customerSignupBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.customerSignupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerSignupBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerSignupBtn.Location = new System.Drawing.Point(416, 354);
+            this.customerSignupBtn.Name = "customerSignupBtn";
+            this.customerSignupBtn.Size = new System.Drawing.Size(183, 60);
+            this.customerSignupBtn.TabIndex = 8;
+            this.customerSignupBtn.Text = "Signup as customer";
+            this.customerSignupBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.customerSignupBtn.UseVisualStyleBackColor = false;
+            this.customerSignupBtn.Click += new System.EventHandler(this.customerSignupBtn_Click);
+            // 
+            // adminSignupBtn
+            // 
+            this.adminSignupBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.adminSignupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminSignupBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.adminSignupBtn.Location = new System.Drawing.Point(189, 354);
+            this.adminSignupBtn.Name = "adminSignupBtn";
+            this.adminSignupBtn.Size = new System.Drawing.Size(192, 60);
+            this.adminSignupBtn.TabIndex = 7;
+            this.adminSignupBtn.Text = "Signup as admin";
+            this.adminSignupBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.adminSignupBtn.UseVisualStyleBackColor = false;
+            this.adminSignupBtn.Click += new System.EventHandler(this.adminSignupBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.customerSignupBtn);
+            this.Controls.Add(this.adminSignupBtn);
             this.Controls.Add(this.customerLoginBtn);
             this.Controls.Add(this.adminLoginBtn);
             this.Controls.Add(this.passwordTextBox);
@@ -143,6 +175,8 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button adminLoginBtn;
         private System.Windows.Forms.Button customerLoginBtn;
+        private System.Windows.Forms.Button customerSignupBtn;
+        private System.Windows.Forms.Button adminSignupBtn;
     }
 }
 

@@ -32,7 +32,6 @@
             this.viewDriverBtn = new System.Windows.Forms.Button();
             this.addNewDriverBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.addingDriverContactTxt = new System.Windows.Forms.TextBox();
             this.addingDriverNameTxt = new System.Windows.Forms.TextBox();
             this.addingDriverIdTxt = new System.Windows.Forms.TextBox();
@@ -42,14 +41,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.addingDriverAvailablityCombo = new System.Windows.Forms.ComboBox();
             this.backToAdminDashboardBtn2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DriverManagerGrid = new System.Windows.Forms.DataGridView();
+            this.changeDriverAvailabilityBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverManagerGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // removeDriverBtn
             // 
             this.removeDriverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeDriverBtn.Location = new System.Drawing.Point(111, 322);
+            this.removeDriverBtn.Location = new System.Drawing.Point(143, 322);
             this.removeDriverBtn.Name = "removeDriverBtn";
             this.removeDriverBtn.Size = new System.Drawing.Size(152, 35);
             this.removeDriverBtn.TabIndex = 9;
@@ -60,17 +60,18 @@
             // viewDriverBtn
             // 
             this.viewDriverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewDriverBtn.Location = new System.Drawing.Point(794, 105);
+            this.viewDriverBtn.Location = new System.Drawing.Point(566, 117);
             this.viewDriverBtn.Name = "viewDriverBtn";
-            this.viewDriverBtn.Size = new System.Drawing.Size(196, 30);
+            this.viewDriverBtn.Size = new System.Drawing.Size(196, 35);
             this.viewDriverBtn.TabIndex = 8;
             this.viewDriverBtn.Text = "View selected driver";
             this.viewDriverBtn.UseVisualStyleBackColor = true;
+            this.viewDriverBtn.Click += new System.EventHandler(this.viewDriverBtn_Click);
             // 
             // addNewDriverBtn
             // 
             this.addNewDriverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewDriverBtn.Location = new System.Drawing.Point(111, 268);
+            this.addNewDriverBtn.Location = new System.Drawing.Point(143, 268);
             this.addNewDriverBtn.Name = "addNewDriverBtn";
             this.addNewDriverBtn.Size = new System.Drawing.Size(152, 35);
             this.addNewDriverBtn.TabIndex = 7;
@@ -89,43 +90,40 @@
             this.label1.Text = "Driver Management Screen";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(794, 141);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(235, 229);
-            this.textBox2.TabIndex = 10;
-            // 
             // addingDriverContactTxt
             // 
             this.addingDriverContactTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addingDriverContactTxt.Location = new System.Drawing.Point(166, 178);
+            this.addingDriverContactTxt.Location = new System.Drawing.Point(198, 163);
+            this.addingDriverContactTxt.MaxLength = 10;
             this.addingDriverContactTxt.Name = "addingDriverContactTxt";
             this.addingDriverContactTxt.Size = new System.Drawing.Size(235, 24);
             this.addingDriverContactTxt.TabIndex = 20;
+            this.addingDriverContactTxt.TextChanged += new System.EventHandler(this.addingDriverContactTxt_TextChanged);
+            this.addingDriverContactTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addingDriverContactTxt_KeyPress);
             // 
             // addingDriverNameTxt
             // 
             this.addingDriverNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addingDriverNameTxt.Location = new System.Drawing.Point(166, 141);
+            this.addingDriverNameTxt.Location = new System.Drawing.Point(198, 112);
             this.addingDriverNameTxt.Name = "addingDriverNameTxt";
             this.addingDriverNameTxt.Size = new System.Drawing.Size(235, 24);
             this.addingDriverNameTxt.TabIndex = 19;
+            this.addingDriverNameTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addingDriverNameTxt_KeyPress);
             // 
             // addingDriverIdTxt
             // 
             this.addingDriverIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addingDriverIdTxt.Location = new System.Drawing.Point(166, 108);
+            this.addingDriverIdTxt.Location = new System.Drawing.Point(703, 82);
             this.addingDriverIdTxt.Name = "addingDriverIdTxt";
             this.addingDriverIdTxt.Size = new System.Drawing.Size(235, 24);
             this.addingDriverIdTxt.TabIndex = 18;
+            this.addingDriverIdTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addingDriverIdTxt_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 145);
+            this.label5.Location = new System.Drawing.Point(46, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 17;
@@ -135,7 +133,7 @@
             // 
             this.addingDriverNumberTxt.AutoSize = true;
             this.addingDriverNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addingDriverNumberTxt.Location = new System.Drawing.Point(14, 181);
+            this.addingDriverNumberTxt.Location = new System.Drawing.Point(46, 166);
             this.addingDriverNumberTxt.Name = "addingDriverNumberTxt";
             this.addingDriverNumberTxt.Size = new System.Drawing.Size(149, 20);
             this.addingDriverNumberTxt.TabIndex = 16;
@@ -145,7 +143,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 217);
+            this.label3.Location = new System.Drawing.Point(46, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 15;
@@ -155,7 +153,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 111);
+            this.label2.Location = new System.Drawing.Point(571, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 14;
@@ -163,9 +161,13 @@
             // 
             // addingDriverAvailablityCombo
             // 
+            this.addingDriverAvailablityCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.addingDriverAvailablityCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addingDriverAvailablityCombo.FormattingEnabled = true;
-            this.addingDriverAvailablityCombo.Location = new System.Drawing.Point(166, 215);
+            this.addingDriverAvailablityCombo.Items.AddRange(new object[] {
+            "true",
+            "false"});
+            this.addingDriverAvailablityCombo.Location = new System.Drawing.Point(198, 215);
             this.addingDriverAvailablityCombo.Name = "addingDriverAvailablityCombo";
             this.addingDriverAvailablityCombo.Size = new System.Drawing.Size(235, 26);
             this.addingDriverAvailablityCombo.TabIndex = 22;
@@ -181,13 +183,24 @@
             this.backToAdminDashboardBtn2.Text = "🔙";
             this.backToAdminDashboardBtn2.Click += new System.EventHandler(this.backToAdminDashboardBtn2_Click);
             // 
-            // dataGridView1
+            // DriverManagerGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(443, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(320, 265);
-            this.dataGridView1.TabIndex = 24;
+            this.DriverManagerGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DriverManagerGrid.Location = new System.Drawing.Point(461, 166);
+            this.DriverManagerGrid.Name = "DriverManagerGrid";
+            this.DriverManagerGrid.Size = new System.Drawing.Size(477, 241);
+            this.DriverManagerGrid.TabIndex = 24;
+            // 
+            // changeDriverAvailabilityBtn
+            // 
+            this.changeDriverAvailabilityBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeDriverAvailabilityBtn.Location = new System.Drawing.Point(776, 117);
+            this.changeDriverAvailabilityBtn.Name = "changeDriverAvailabilityBtn";
+            this.changeDriverAvailabilityBtn.Size = new System.Drawing.Size(162, 35);
+            this.changeDriverAvailabilityBtn.TabIndex = 25;
+            this.changeDriverAvailabilityBtn.Text = "Update Availability";
+            this.changeDriverAvailabilityBtn.UseVisualStyleBackColor = true;
+            this.changeDriverAvailabilityBtn.Click += new System.EventHandler(this.changeDriverAvailabilityBtn_Click);
             // 
             // DriverManagementScreen
             // 
@@ -195,7 +208,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1063, 456);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.changeDriverAvailabilityBtn);
+            this.Controls.Add(this.DriverManagerGrid);
             this.Controls.Add(this.backToAdminDashboardBtn2);
             this.Controls.Add(this.addingDriverAvailablityCombo);
             this.Controls.Add(this.addingDriverContactTxt);
@@ -205,14 +219,13 @@
             this.Controls.Add(this.addingDriverNumberTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.removeDriverBtn);
             this.Controls.Add(this.viewDriverBtn);
             this.Controls.Add(this.addNewDriverBtn);
             this.Controls.Add(this.label1);
             this.Name = "DriverManagementScreen";
             this.Text = "DriverManagementScreen";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverManagerGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +237,6 @@
         private System.Windows.Forms.Button viewDriverBtn;
         private System.Windows.Forms.Button addNewDriverBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox addingDriverContactTxt;
         private System.Windows.Forms.TextBox addingDriverNameTxt;
         private System.Windows.Forms.TextBox addingDriverIdTxt;
@@ -234,6 +246,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox addingDriverAvailablityCombo;
         private System.Windows.Forms.Label backToAdminDashboardBtn2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DriverManagerGrid;
+        private System.Windows.Forms.Button changeDriverAvailabilityBtn;
     }
 }

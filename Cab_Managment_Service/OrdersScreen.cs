@@ -15,6 +15,7 @@ namespace Cab_Managment_Service
         public OrdersScreen()
         {
             InitializeComponent();
+            CustomerManager.LoadCustomerOrders(viewOrderDataGrid);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -32,6 +33,11 @@ namespace Cab_Managment_Service
             adminDashboard dashboard = new adminDashboard();
             dashboard.Show();
             this.Hide();
+        }
+
+        private void viewOrderDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -32,9 +32,7 @@
             this.viewOrderBtn = new System.Windows.Forms.Button();
             this.manageDriverBtn = new System.Windows.Forms.Button();
             this.manageCarsBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backToLoginBtn1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +48,7 @@
             // viewOrderBtn
             // 
             this.viewOrderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewOrderBtn.Location = new System.Drawing.Point(537, 276);
+            this.viewOrderBtn.Location = new System.Drawing.Point(315, 282);
             this.viewOrderBtn.Name = "viewOrderBtn";
             this.viewOrderBtn.Size = new System.Drawing.Size(161, 36);
             this.viewOrderBtn.TabIndex = 2;
@@ -61,7 +59,7 @@
             // manageDriverBtn
             // 
             this.manageDriverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageDriverBtn.Location = new System.Drawing.Point(537, 193);
+            this.manageDriverBtn.Location = new System.Drawing.Point(315, 199);
             this.manageDriverBtn.Name = "manageDriverBtn";
             this.manageDriverBtn.Size = new System.Drawing.Size(161, 36);
             this.manageDriverBtn.TabIndex = 3;
@@ -72,22 +70,13 @@
             // manageCarsBtn
             // 
             this.manageCarsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageCarsBtn.Location = new System.Drawing.Point(537, 112);
+            this.manageCarsBtn.Location = new System.Drawing.Point(315, 118);
             this.manageCarsBtn.Name = "manageCarsBtn";
             this.manageCarsBtn.Size = new System.Drawing.Size(161, 36);
             this.manageCarsBtn.TabIndex = 4;
             this.manageCarsBtn.Text = "Manage Cars";
             this.manageCarsBtn.UseVisualStyleBackColor = true;
             this.manageCarsBtn.Click += new System.EventHandler(this.manageCarsBtn_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 264);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // backToLoginBtn1
             // 
@@ -107,14 +96,12 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.backToLoginBtn1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.manageCarsBtn);
             this.Controls.Add(this.manageDriverBtn);
             this.Controls.Add(this.viewOrderBtn);
             this.Controls.Add(this.label1);
             this.Name = "adminDashboard";
             this.Text = "adminDashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +113,6 @@
         private System.Windows.Forms.Button viewOrderBtn;
         private System.Windows.Forms.Button manageDriverBtn;
         private System.Windows.Forms.Button manageCarsBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label backToLoginBtn1;
     }
 }

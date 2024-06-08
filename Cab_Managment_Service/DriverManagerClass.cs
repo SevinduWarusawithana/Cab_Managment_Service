@@ -105,5 +105,87 @@ namespace Cab_Managment_Service
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        public static DataTable GetAllDrivers()
+        {
+            DataTable driversTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM Driver";
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.Fill(driversTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return driversTable;
+        }
+
+        /*public static DataTable GetAllDrivers()
+        {
+            DataTable driversTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string querySelect = "SELECT * FROM Driver";
+                    using (SqlCommand command = new SqlCommand(querySelect, connection))
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        driversTable.Load(reader);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("SQL Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return driversTable;
+        }*/
+
+        public static DataTable getDriverDataById(int id)
+        {
+            DataTable dataTable = new DataTable();
+
+            // SQL query to select the record from the database based on the ID
+            string query = "SELECT * FROM Driver WHERE Driver_Id = @Id";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameter for the ID
+                        command.Parameters.AddWithValue("@Id", id);
+
+                        // Create a new SqlDataAdapter
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        // Fill the DataTable with data from the database
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return dataTable;
+        }
     }
 }

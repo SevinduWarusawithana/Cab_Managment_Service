@@ -9,10 +9,12 @@ namespace Cab_Managment_Service
     internal class Admin : Person
     {
         protected string password;
+        private string name;
 
-        public Admin(int userId, string userName, string userContact, string password) : base(userId, userName, userContact)
+        public Admin(int userId, string name, string userContact, string userName, string password) : base(userId, userName, userContact)
         {
             this.password = password;
+            this.name = name;
         }
 
         public string Password
@@ -20,6 +22,14 @@ namespace Cab_Managment_Service
             get { return password; }
             set { password = value; }
         }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+
 
     }
 }

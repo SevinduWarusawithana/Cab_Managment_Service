@@ -29,16 +29,81 @@ namespace Cab_Managment_Service
 
         private void adminLoginBtn_Click(object sender, EventArgs e)
         {
-            adminDashboard dashboard = new adminDashboard();
-            dashboard.Show();
-            this.Hide();
+            if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
+            {
+                MessageBox.Show("Please enter all details"); 
+                return;
+            }
+            else
+            {
+                string username = usernameTextBox.Text;
+                string password = passwordTextBox.Text;
+
+                if (UserAuthentication.authenticateUser(username, password, "Admin"))
+                {
+                    adminDashboard dashboard = new adminDashboard();
+                    dashboard.Show();
+                    this.Hide();
+                }
+            }
+            
+            
         }
 
         private void customerLoginBtn_Click(object sender, EventArgs e)
         {
-            customerDashboard dashboard = new customerDashboard();
-            dashboard.Show();
-            this.Hide();
+            if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
+            {
+                MessageBox.Show("Please enter all details"); 
+                return;
+            }
+            else
+            {
+                string username = usernameTextBox.Text;
+                string password = passwordTextBox.Text;
+
+                if (UserAuthentication.authenticateUser(username, password, "Customer"))
+                {
+                    customerDashboard dashboard = new customerDashboard(username, password);
+                    dashboard.Show();
+                    this.Hide();
+                }
+            }
+            
+
+            
+        }
+
+        private void adminSignupBtn_Click(object sender, EventArgs e)
+        {
+            if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
+            {
+                MessageBox.Show("Please enter all details"); 
+                return;
+            }
+            else
+            {
+                AdminSignupScreen dashboard = new AdminSignupScreen();
+                dashboard.Show();
+                this.Hide();
+            }
+            
+        }
+
+        private void customerSignupBtn_Click(object sender, EventArgs e)
+        {
+            if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
+            {
+                MessageBox.Show("Please enter all details"); 
+                return;
+            }
+            else
+            {
+                CustomerSignupScreen dashboard = new CustomerSignupScreen();
+                dashboard.Show();
+                this.Hide();
+            }
+            
         }
     }
 }

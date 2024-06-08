@@ -9,29 +9,21 @@ namespace Cab_Managment_Service
     internal class Customer : Person
     {
         // aguemnets
-        private string address;
-        private string email;
+        private string name;
         private string password;
 
         //constructor
-        public Customer(int userId, string userName, string userContact, string address, string email, string password) : base(userId, userName, userContact)
+        public Customer(int userId, string name, string userContact, string userName, string password) : base(userId, userName, userContact)
         {
-            this.address = address;
-            this.email = email;
-            this.password = password;
+            this.Name = name;
+            this.Password = password;
         }
 
         //getters and setters
-        public string Address
+        public string Name
         {
-            get { return address; }
-            set { address = value; }
-        }
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
+            get { return name; }
+            set { name = value; }
         }
 
         public string Password
@@ -39,5 +31,7 @@ namespace Cab_Managment_Service
             get { return password; }
             set { password = value; }
         }
+
+
     }
 }

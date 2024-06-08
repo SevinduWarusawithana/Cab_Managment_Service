@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -84,6 +85,58 @@ namespace Cab_Managment_Service
             }
         }
 
-        
+        public static DataTable GetAllCars()
+        {
+            DataTable carsTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM Car";
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.Fill(carsTable);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return carsTable;
+        }
+
+        public static DataTable getCarDataById(int id)
+        {
+            DataTable dataTable = new DataTable();
+
+            // SQL query to select the record from the database based on the ID
+            string query = "SELECT * FROM Car WHERE Car_Id = @Id";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameter for the ID
+                        command.Parameters.AddWithValue("@Id", id);
+
+                        // Create a new SqlDataAdapter
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        // Fill the DataTable with data from the database
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return dataTable;
+        }
+
     }
 } 

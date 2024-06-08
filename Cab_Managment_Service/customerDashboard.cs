@@ -12,9 +12,15 @@ namespace Cab_Managment_Service
 {
     public partial class customerDashboard : Form
     {
-        public customerDashboard()
+        public string username;
+        public string password;
+
+        public customerDashboard(string username, string password)
         {
+            this.username = username;
+            this.password = password;
             InitializeComponent();
+            
         }
 
         private void customerDashboard_Load(object sender, EventArgs e)
@@ -22,29 +28,36 @@ namespace Cab_Managment_Service
 
         }
 
-        private void viewAvailableCarBtn_Click(object sender, EventArgs e)
-        {
-            AvailableCarsScreen screen = new AvailableCarsScreen();
-            screen.Show();
-            this.Hide();
-        }
+        
 
-        private void viewAvailableDriverBtn_Click(object sender, EventArgs e)
+        private void GoTo_Click(object sender, EventArgs e)
         {
-            AvailableDriversScreen screen = new AvailableDriversScreen();
-            screen.Show();
-            this.Hide();
-        }
-
-        private void newOrderBtn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Please select a car first");
+            
         }
 
         private void backToLoginBtn2_Click(object sender, EventArgs e)
         {
             Login loginpage = new Login();
             loginpage.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoToPlaceOrderScreen_Click(object sender, EventArgs e)
+        {
+            PlaceOrderScreen screen = new PlaceOrderScreen(username, password);
+            screen.Show();
+            this.Hide();
+        }
+
+        private void viewMyOrdersBtn_Click(object sender, EventArgs e)
+        {
+            MyOrders screen = new MyOrders(username, password);
+            screen.Show();
             this.Hide();
         }
     }
