@@ -63,8 +63,6 @@
     <Compile Include="AdminSignupScreen.Designer.cs">
       <DependentUpon>AdminSignupScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="AvailabaleDriversClass.cs" />
-    <Compile Include="AvailableCarsClass.cs" />
     <Compile Include="CarManagementScreen.cs">
       <SubType>Form</SubType>
     </Compile>

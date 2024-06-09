@@ -127,34 +127,7 @@ namespace Cab_Managment_Service
             return driversTable;
         }
 
-        /*public static DataTable GetAllDrivers()
-        {
-            DataTable driversTable = new DataTable();
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string querySelect = "SELECT * FROM Driver";
-                    using (SqlCommand command = new SqlCommand(querySelect, connection))
-                    {
-                        connection.Open();
-                        SqlDataReader reader = command.ExecuteReader();
-                        driversTable.Load(reader);
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("SQL Error: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-
-            return driversTable;
-        }*/
+        
 
         public static DataTable getDriverDataById(int id)
         {
