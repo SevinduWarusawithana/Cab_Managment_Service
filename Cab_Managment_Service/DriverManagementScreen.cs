@@ -36,6 +36,7 @@ namespace Cab_Managment_Service
                 string phone = addingDriverContactTxt.Text;
 
                 bool availability;
+
                 if (addingDriverAvailablityCombo.Text == "true")
                 {
                     availability = true;

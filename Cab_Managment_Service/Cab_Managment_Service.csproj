@@ -130,7 +130,6 @@
       <DependentUpon>OrdersScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
-    <Compile Include="PlaceOrderClass.cs" />
     <Compile Include="PlaceOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
