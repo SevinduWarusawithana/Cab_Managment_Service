@@ -60,5 +60,12 @@ namespace Cab_Managment_Service
             screen.Show();
             this.Hide();
         }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Login loginpage = new Login();
+            loginpage.Show();
+            this.Hide();
+        }
     }
 }

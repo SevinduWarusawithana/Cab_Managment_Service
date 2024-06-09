@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backToLoginBtn2 = new System.Windows.Forms.Label();
             this.viewMyOrdersBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GoToPlaceOrderScreen
@@ -100,12 +101,26 @@
             this.viewMyOrdersBtn.UseVisualStyleBackColor = true;
             this.viewMyOrdersBtn.Click += new System.EventHandler(this.viewMyOrdersBtn_Click);
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.Black;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutBtn.Location = new System.Drawing.Point(660, 374);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(107, 50);
+            this.logoutBtn.TabIndex = 26;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // customerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.viewMyOrdersBtn);
             this.Controls.Add(this.backToLoginBtn2);
             this.Controls.Add(this.label4);
@@ -127,5 +142,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label backToLoginBtn2;
         private System.Windows.Forms.Button viewMyOrdersBtn;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

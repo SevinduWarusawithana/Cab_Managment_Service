@@ -67,6 +67,7 @@
             this.noBtn.TabIndex = 2;
             this.noBtn.Text = "no";
             this.noBtn.UseVisualStyleBackColor = false;
+            this.noBtn.Click += new System.EventHandler(this.noBtn_Click);
             // 
             // Logout
             // 
