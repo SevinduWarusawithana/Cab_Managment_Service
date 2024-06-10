@@ -8,6 +8,7 @@ namespace Cab_Managment_Service
 {
     internal class Order
     {
+        // aguements
         private int orderId;
         private int customerId;
         private int driverId;
@@ -16,6 +17,7 @@ namespace Cab_Managment_Service
         private string location;
         private string destination;
 
+        // constructor
         public Order(int orderId, int customerId, int driverId, int carId, DateTime orderDate, string location, string destination)
         {
             this.orderId = orderId;

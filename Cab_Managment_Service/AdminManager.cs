@@ -12,6 +12,8 @@ namespace Cab_Managment_Service
     {
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
         
+
+        //change availability method
         public static int ChangeAvailability(int id, string availability, string managementType)
         {
             string query = $"UPDATE {managementType} SET Available_{managementType} = @Availability WHERE {managementType}_Id = @Id";
@@ -32,13 +34,15 @@ namespace Cab_Managment_Service
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("An error occurred: " + ex.Message);
+                        Console.WriteLine("Error happend! : " + ex.Message);
                     }
                 }
             }
             return rowsAffected;
         }
 
+
+        //add admin method
         public static int addAdmin(Admin admin)
         {
             string queryInsert = "INSERT INTO Admins (Admin_Name, Contact_Admin, Admin_Username, Admin_Password) OUTPUT INSERTED.Admin_ID VALUES (@Name, @Contact, @Username, @Password)";
@@ -63,7 +67,7 @@ namespace Cab_Managment_Service
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("An error occurred: " + ex.Message);
+                        Console.WriteLine("Error happend! : " + ex.Message);
                         return -1;
                     }
                 }

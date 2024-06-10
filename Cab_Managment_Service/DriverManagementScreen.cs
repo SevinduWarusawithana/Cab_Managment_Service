@@ -137,13 +137,13 @@ namespace Cab_Managment_Service
                 int state = AdminManager.ChangeAvailability(id, drvieravailable, "Driver");
                 if (state > 0)
                 {
-                    MessageBox.Show("Availability updated successfully.");
+                    MessageBox.Show("Successfully updated availability.");
                     LoadDriverData();
 
                 }
                 else
                 {
-                    MessageBox.Show("Error Happened Make Sure you enter the correct Driver ID");
+                    MessageBox.Show("Error Happened! Please fill correct Driver ID");
                 }
             }
             catch (Exception ex)
@@ -177,7 +177,7 @@ namespace Cab_Managment_Service
         {
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
             {
-                // If the pressed key is not a letter, space, or control key, ignore it
+                // ignore the key press if it's not a letter, space, or control key
                 e.Handled = true;
             }
         }

@@ -42,7 +42,7 @@ namespace Cab_Managment_Service
                     if (newId > 0)
                     {
                         customer.UserId = newId;
-                        MessageBox.Show("customer added successfully");
+                        MessageBox.Show("Successfully added customer");
 
                     }
                     else
@@ -78,7 +78,7 @@ namespace Cab_Managment_Service
         {
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
             {
-                // If the pressed key is not a letter, space, or control key, ignore it
+                // ignore the key press if it's not a letter, space, or control key
                 e.Handled = true;
             }
         }

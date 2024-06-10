@@ -37,7 +37,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(276, 116);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(279, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 24);
             this.label1.TabIndex = 0;
@@ -48,7 +49,7 @@
             this.yesBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.yesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yesBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.yesBtn.Location = new System.Drawing.Point(280, 194);
+            this.yesBtn.Location = new System.Drawing.Point(283, 212);
             this.yesBtn.Name = "yesBtn";
             this.yesBtn.Size = new System.Drawing.Size(84, 37);
             this.yesBtn.TabIndex = 1;
@@ -61,7 +62,7 @@
             this.noBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.noBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.noBtn.Location = new System.Drawing.Point(416, 194);
+            this.noBtn.Location = new System.Drawing.Point(419, 212);
             this.noBtn.Name = "noBtn";
             this.noBtn.Size = new System.Drawing.Size(84, 37);
             this.noBtn.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.noBtn);
             this.Controls.Add(this.yesBtn);

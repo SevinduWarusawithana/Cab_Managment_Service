@@ -8,15 +8,18 @@ namespace Cab_Managment_Service
 {
     internal class Admin : Person
     {
+        // aguements
         protected string password;
         private string name;
 
+        // constructor
         public Admin(int userId, string name, string userContact, string userName, string password) : base(userId, userName, userContact)
         {
             this.password = password;
             this.name = name;
         }
 
+        //getters and setters
         public string Password
         {
             get { return password; }

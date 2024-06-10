@@ -13,6 +13,7 @@ namespace Cab_Managment_Service
     {
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
+        //add customer method
         public static int addCustomer(Customer customer)
         {
             string queryInsert = "INSERT INTO Customers (Customer_Name, Contact_Customer, Customer_Username, Customer_Password) OUTPUT INSERTED.Customer_ID VALUES (@Name, @Contact, @Username, @Password)";
@@ -37,13 +38,14 @@ namespace Cab_Managment_Service
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("An error occurred: " + ex.Message);
+                        Console.WriteLine("Error happend! " + ex.Message);
                         return -1;
                     }
                 }
             }
         }
 
+        //getting available car table and available driver table to the datagrids
         public static void ShowAvailableData(DataGridView dataGridView, string query)
         {
             try
@@ -65,6 +67,7 @@ namespace Cab_Managment_Service
 
         }
 
+        //customer place an order
         public static int placeorder(Order order)
         {
             try
@@ -74,7 +77,7 @@ namespace Cab_Managment_Service
                 {
                     connection.Open();
 
-                    // Check vehicle availability
+                    // Check vehicle availability and select them
                     string checkVehicleQuery = "SELECT Available_Car FROM Car WHERE Car_ID = @CarId";
                     SqlCommand carCommand = new SqlCommand(checkVehicleQuery, connection);
                     carCommand.Parameters.AddWithValue("@CarId", order.CarId);
@@ -82,11 +85,11 @@ namespace Cab_Managment_Service
 
                     if (!carAvailable)
                     {
-                        MessageBox.Show("Car is Not Available");
+                        MessageBox.Show("Car is Not available");
                         return -1; // car is not available
                     }
 
-                    // Check driver availability
+                    // Check driver availability and select them
                     string checkDriverQuery = "SELECT Available_Driver FROM Driver WHERE Driver_Id = @DriverId";
                     SqlCommand driverCommand = new SqlCommand(checkDriverQuery, connection);
                     driverCommand.Parameters.AddWithValue("@DriverId", order.DriverId);
@@ -94,11 +97,11 @@ namespace Cab_Managment_Service
 
                     if (!driverAvailable)
                     {
-                        MessageBox.Show("Driver is not Available");
+                        MessageBox.Show("Driver is not available");
                         return -1; // Driver is not available
                     }
 
-                    // Insert order
+                    // Insert order details
                     string insertOrderQuery = @"INSERT INTO Orders (Customer_ID, Car_ID, Driver_ID, Order_Date, Location, Destination) OUTPUT INSERTED.Order_ID VALUES (@CustomerId, @CarId, @DriverId, @OrderDate, @Location, @Destination)";
                     SqlCommand insertOrderCommand = new SqlCommand(insertOrderQuery, connection);
                     insertOrderCommand.Parameters.AddWithValue("@CustomerId", order.CustomerId);
@@ -110,13 +113,13 @@ namespace Cab_Managment_Service
 
                     orderId = Convert.ToInt32(insertOrderCommand.ExecuteScalar());
 
-                    // Update car availability
+                    // Update car availability in table
                     string updateVehicleQuery = "UPDATE Car SET Available_Car = 0 WHERE Car_ID = @CarId";
                     SqlCommand updateVehicleCommand = new SqlCommand(updateVehicleQuery, connection);
                     updateVehicleCommand.Parameters.AddWithValue("@CarId", order.CarId);
                     updateVehicleCommand.ExecuteNonQuery();
 
-                    // Update driver availability
+                    // Update driver availability in table
                     string updateDriverQuery = "UPDATE Driver SET Available_Driver = 0 WHERE Driver_Id = @DriverId";
                     SqlCommand updateDriverCommand = new SqlCommand(updateDriverQuery, connection);
                     updateDriverCommand.Parameters.AddWithValue("@DriverId", order.DriverId);
@@ -137,6 +140,7 @@ namespace Cab_Managment_Service
             }
         }
 
+        //fetch that data to the customer table
         public static int FetchId(string username, string password)
         {
             int customerId;
@@ -160,13 +164,14 @@ namespace Cab_Managment_Service
                     catch (Exception ex)
                     {
                         // Handle exceptions (e.g., log the error)
-                        Console.WriteLine("An error occurred: " + ex.Message);
+                        Console.WriteLine("Error happend! " + ex.Message);
                         return -1;
                     }
                 }
             }
         }
-
+        
+        //show the orders in admin dashboard (method over loading)
         public static void LoadCustomerOrders(DataGridView dataGridView)
         {
             string query = "SELECT * FROM Orders";
@@ -184,10 +189,11 @@ namespace Cab_Managment_Service
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error happend! " + ex.Message);
             }
         }
 
+        //show the orders in customer view my orders (method over loading)
         public static void LoadCustomerOrders(DataGridView dataGridView, string username, string password)
         {
             int user_Id = FetchId(username, password);
@@ -206,7 +212,7 @@ namespace Cab_Managment_Service
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error happend! " + ex.Message);
             }
 
         }

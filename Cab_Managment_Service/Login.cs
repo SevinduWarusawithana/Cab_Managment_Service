@@ -31,7 +31,7 @@ namespace Cab_Managment_Service
         {
             if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
             {
-                MessageBox.Show("Please enter all details"); 
+                MessageBox.Show("Please fill all details"); 
                 return;
             }
             else
@@ -54,7 +54,7 @@ namespace Cab_Managment_Service
         {
             if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
             {
-                MessageBox.Show("Please enter all details"); 
+                MessageBox.Show("Please fill all details"); 
                 return;
             }
             else
@@ -78,7 +78,7 @@ namespace Cab_Managment_Service
         {
             if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
             {
-                MessageBox.Show("Please enter all details"); 
+                MessageBox.Show("Please fill all details"); 
                 return;
             }
             else
@@ -94,7 +94,7 @@ namespace Cab_Managment_Service
         {
             if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
             {
-                MessageBox.Show("Please enter all details"); 
+                MessageBox.Show("Please fill all details"); 
                 return;
             }
             else

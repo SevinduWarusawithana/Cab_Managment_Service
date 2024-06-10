@@ -12,6 +12,8 @@ namespace Cab_Managment_Service
     internal class CarManagerClass
     {
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
+        
+        //add car method
         public static int addCar(Vehicle vehicle)
         {
 
@@ -24,13 +26,13 @@ namespace Cab_Managment_Service
                 {
                     using (SqlCommand command = new SqlCommand(queryInsert, connection))
                     {
-                        // Add parameters
+                        // add parameters
                         command.Parameters.AddWithValue("@Name", vehicle.Vehicle_Name);
                         command.Parameters.AddWithValue("@NUMBER", vehicle.Vehicle_Plate);
                         command.Parameters.AddWithValue("@Availability", vehicle.Vehicle_Availability);
                         connection.Open();
 
-                        // Execute the command and fetch the newly created ID to create an Object
+                        // Execute the command and retrieve the newly created ID to instantiate an object
                         int newID = Convert.ToInt32(command.ExecuteScalar());
                         return newID;
 
@@ -50,6 +52,7 @@ namespace Cab_Managment_Service
             }
         }
 
+        //remove car method
         public static void removeCar(int id)
         {
             string queryDelete = "DELETE FROM Car WHERE Car_ID = @Id";
@@ -66,11 +69,11 @@ namespace Cab_Managment_Service
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Car removed successfully");
+                            MessageBox.Show("Successfully removed car");
                         }
                         else
                         {
-                            MessageBox.Show("No car found with the specified ID");
+                            MessageBox.Show("No car found with the given ID");
                         }
                     }
                 }
@@ -85,6 +88,8 @@ namespace Cab_Managment_Service
             }
         }
 
+
+        //get car table to the data grid
         public static DataTable GetAllCars()
         {
             DataTable carsTable = new DataTable();
@@ -106,11 +111,13 @@ namespace Cab_Managment_Service
             return carsTable;
         }
 
+
+        //select a car by ID
         public static DataTable getCarDataById(int id)
         {
             DataTable dataTable = new DataTable();
 
-            // SQL query to select the record from the database based on the ID
+            // sql query to select a record from the database using the ID
             string query = "SELECT * FROM Car WHERE Car_Id = @Id";
 
             try
@@ -119,13 +126,13 @@ namespace Cab_Managment_Service
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Add parameter for the ID
+                        // add the ID parameter to the sql command
                         command.Parameters.AddWithValue("@Id", id);
 
-                        // Create a new SqlDataAdapter
+                        // create a new SqlDataAdapter
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-                        // Fill the DataTable with data from the database
+                        // populate the DataTable with data from the database
                         adapter.Fill(dataTable);
                     }
                 }

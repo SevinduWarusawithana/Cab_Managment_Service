@@ -77,7 +77,7 @@ namespace Cab_Managment_Service
         {
             if (selectingCarIdTxt.Text == "" || selectingDriverIdTxt.Text == "" || locationTextbox.Text == "" || destinationTextbox.Text == "")
             {
-                MessageBox.Show("Please Provide all the Details in the Textboxes");
+                MessageBox.Show("Please fill all the details");
             }
             else
             {
@@ -95,12 +95,12 @@ namespace Cab_Managment_Service
 
                     if (newId > 0 && customer_Id > 0)
                     {
-                        MessageBox.Show("Order Added Successfully");
+                        MessageBox.Show(" Successfully order added");
                         newOrder.OrderId = newId;
                     }
                     else
                     {
-                        MessageBox.Show("Error Happened");
+                        MessageBox.Show("Error Happened!");
                         newOrder = null;
                     }
                 }

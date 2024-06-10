@@ -60,7 +60,7 @@ namespace Cab_Managment_Service
                 }
                 else
                 {
-                    MessageBox.Show("Error adding car");
+                    MessageBox.Show("Car does not added");
                     //delete the object of the vehicle
                     vehicle = (null);
                 }
@@ -135,13 +135,13 @@ namespace Cab_Managment_Service
                 int state = AdminManager.ChangeAvailability(id, caravailable, "Car");
                 if (state > 0)
                 {
-                    MessageBox.Show("Availability updated successfully.");
+                    MessageBox.Show(" Successfully updated availability.");
                     LoadCarData();
 
                 }
                 else
                 {
-                    MessageBox.Show("Error Happened Make Sure you enter the correct Car ID");
+                    MessageBox.Show("Error Happened! Please fill correct Car ID");
                 }
             }
             catch (Exception ex)

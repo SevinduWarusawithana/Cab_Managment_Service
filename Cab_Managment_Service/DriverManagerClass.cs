@@ -11,6 +11,7 @@ namespace Cab_Managment_Service
 {
     internal class DriverManagerClass
     {
+        //add driver method
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
         public static int addDriver(Driver driver)
         {
@@ -37,28 +38,7 @@ namespace Cab_Managment_Service
                 }
             }
 
-            /*string queryInsert = "INSERT INTO Driver (Driver_Name, Driver_Contact, Available_Driver) VALUES (@Name, @Contact, @Availability)";
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand command = new SqlCommand(queryInsert, connection))
-                    {
-                        // Add parameters
-                        command.Parameters.AddWithValue("@Name", name);
-                        command.Parameters.AddWithValue("@Contact", contact);
-                        command.Parameters.AddWithValue("@Availability", availability);
-                        connection.Open();
-
-                        // Execute the command
-                        command.ExecuteNonQuery();
-
-                        MessageBox.Show("Driver added successfully");
-                    }
-
-                }
-            }*/
+            
             catch (SqlException ex)
             {
                 MessageBox.Show("SQL Error: " + ex.Message);
@@ -71,6 +51,7 @@ namespace Cab_Managment_Service
             }
         }
 
+        //remove driver method
         public static void removeDriver(int id)
         {
             string queryDelete = "DELETE FROM Driver WHERE Driver_ID = @Id";
@@ -87,11 +68,11 @@ namespace Cab_Managment_Service
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Driver removed successfully");
+                            MessageBox.Show("Successfully removed driver");
                         }
                         else
                         {
-                            MessageBox.Show("No Driver found with the specified ID");
+                            MessageBox.Show("No Driver found with the given ID");
                         }
                     }
                 }
@@ -106,6 +87,7 @@ namespace Cab_Managment_Service
             }
         }
 
+        //get driver data to the datagrid
         public static DataTable GetAllDrivers()
         {
             DataTable driversTable = new DataTable();
@@ -128,12 +110,12 @@ namespace Cab_Managment_Service
         }
 
         
-
+        //select a driver by id
         public static DataTable getDriverDataById(int id)
         {
             DataTable dataTable = new DataTable();
 
-            // SQL query to select the record from the database based on the ID
+            // sql query to select a record from the database using the ID
             string query = "SELECT * FROM Driver WHERE Driver_Id = @Id";
 
             try
@@ -142,13 +124,13 @@ namespace Cab_Managment_Service
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Add parameter for the ID
+                        // add the ID parameter to the sql command
                         command.Parameters.AddWithValue("@Id", id);
 
-                        // Create a new SqlDataAdapter
+                        // create a new SqlDataAdapter
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-                        // Fill the DataTable with data from the database
+                        // populate the DataTable with data from the database
                         adapter.Fill(dataTable);
                     }
                 }

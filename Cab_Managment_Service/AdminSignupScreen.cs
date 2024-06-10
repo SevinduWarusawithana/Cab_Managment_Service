@@ -59,7 +59,7 @@ namespace Cab_Managment_Service
                     if (newId > 0)
                     {
                         admin.UserId = newId;
-                        MessageBox.Show("Admin added successfully");
+                        MessageBox.Show("Successfully added admin");
 
                     }
                     else
