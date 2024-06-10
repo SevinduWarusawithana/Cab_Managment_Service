@@ -76,34 +76,18 @@ namespace Cab_Managment_Service
 
         private void adminSignupBtn_Click(object sender, EventArgs e)
         {
-            if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
-            {
-                MessageBox.Show("Please fill all details"); 
-                return;
-            }
-            else
-            {
-                AdminSignupScreen dashboard = new AdminSignupScreen();
-                dashboard.Show();
-                this.Hide();
-            }
+            AdminSignupScreen dashboard = new AdminSignupScreen();
+            dashboard.Show();
+            this.Hide();
             
         }
 
         private void customerSignupBtn_Click(object sender, EventArgs e)
         {
-            if(usernameTextBox.Text == "" || passwordTextBox.Text == "" )
-            {
-                MessageBox.Show("Please fill all details"); 
-                return;
-            }
-            else
-            {
-                CustomerSignupScreen dashboard = new CustomerSignupScreen();
-                dashboard.Show();
-                this.Hide();
-            }
-            
+            CustomerSignupScreen dashboard = new CustomerSignupScreen();
+            dashboard.Show();
+            this.Hide();
+
         }
     }
 }
