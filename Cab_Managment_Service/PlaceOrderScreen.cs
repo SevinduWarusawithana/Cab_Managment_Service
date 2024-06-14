@@ -17,7 +17,7 @@ namespace Cab_Managment_Service
         public string username;
         protected string password;
 
-        readonly string Vehicle_query = "SELECT * FROM Car WHERE Available_Car = 1";
+        readonly string Car_query = "SELECT * FROM Car WHERE Available_Car = 1";
         readonly string Driver_query = "SELECT * FROM Driver WHERE Available_Driver = 1";
         public PlaceOrderScreen(string username, string password)
         {
@@ -34,7 +34,7 @@ namespace Cab_Managment_Service
 
         private void PlaceOrderScreen_Load(object sender, EventArgs e)
         {
-            CustomerManager.ShowAvailableData(availableCarDataGrid, Vehicle_query);
+            CustomerManager.ShowAvailableData(availableCarDataGrid, Car_query);
             CustomerManager.ShowAvailableData(availableDriverDataGrid, Driver_query);
         }
 
@@ -112,7 +112,7 @@ namespace Cab_Managment_Service
 
                 finally
                 {
-                    CustomerManager.ShowAvailableData(availableCarDataGrid, Vehicle_query);
+                    CustomerManager.ShowAvailableData(availableCarDataGrid, Car_query);
                     CustomerManager.ShowAvailableData(availableDriverDataGrid, Driver_query);
                 }
             }
@@ -185,10 +185,6 @@ namespace Cab_Managment_Service
             }
         }
 
-        /*private void availableCarDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            CustomerManager.ShowAvailableData(dataGridView1, Vehicle_query);
-            CustomerManager.ShowAvailableData(dataGridView2, Driver_query);
-        }*/
+        
     }
 }

@@ -77,9 +77,9 @@ namespace Cab_Managment_Service
                 {
                     connection.Open();
 
-                    // Check vehicle availability and select them
-                    string checkVehicleQuery = "SELECT Available_Car FROM Car WHERE Car_ID = @CarId";
-                    SqlCommand carCommand = new SqlCommand(checkVehicleQuery, connection);
+                    // Check car availability and select them
+                    string checkCarQuery = "SELECT Available_Car FROM Car WHERE Car_ID = @CarId";
+                    SqlCommand carCommand = new SqlCommand(checkCarQuery, connection);
                     carCommand.Parameters.AddWithValue("@CarId", order.CarId);
                     bool carAvailable = (bool)carCommand.ExecuteScalar();
 
@@ -114,10 +114,10 @@ namespace Cab_Managment_Service
                     orderId = Convert.ToInt32(insertOrderCommand.ExecuteScalar());
 
                     // Update car availability in table
-                    string updateVehicleQuery = "UPDATE Car SET Available_Car = 0 WHERE Car_ID = @CarId";
-                    SqlCommand updateVehicleCommand = new SqlCommand(updateVehicleQuery, connection);
-                    updateVehicleCommand.Parameters.AddWithValue("@CarId", order.CarId);
-                    updateVehicleCommand.ExecuteNonQuery();
+                    string updateCarQuery = "UPDATE Car SET Available_Car = 0 WHERE Car_ID = @CarId";
+                    SqlCommand updateCarCommand = new SqlCommand(updateCarQuery, connection);
+                    updateCarCommand.Parameters.AddWithValue("@CarId", order.CarId);
+                    updateCarCommand.ExecuteNonQuery();
 
                     // Update driver availability in table
                     string updateDriverQuery = "UPDATE Driver SET Available_Driver = 0 WHERE Driver_Id = @DriverId";

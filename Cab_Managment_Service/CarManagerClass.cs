@@ -14,7 +14,7 @@ namespace Cab_Managment_Service
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\APIIT\Sem02 L4\Software Devolopment & Application Modelling 02\cab_system_db\car_management_db.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
         
         //add car method
-        public static int addCar(Vehicle vehicle)
+        public static int addCar(Car car)
         {
 
 
@@ -27,9 +27,9 @@ namespace Cab_Managment_Service
                     using (SqlCommand command = new SqlCommand(queryInsert, connection))
                     {
                         // add parameters
-                        command.Parameters.AddWithValue("@Name", vehicle.Vehicle_Name);
-                        command.Parameters.AddWithValue("@NUMBER", vehicle.Vehicle_Plate);
-                        command.Parameters.AddWithValue("@Availability", vehicle.Vehicle_Availability);
+                        command.Parameters.AddWithValue("@Name", car.Car_Name);
+                        command.Parameters.AddWithValue("@NUMBER", car.Car_Plate);
+                        command.Parameters.AddWithValue("@Availability", car.Car_Availability);
                         connection.Open();
 
                         // Execute the command and retrieve the newly created ID to instantiate an object

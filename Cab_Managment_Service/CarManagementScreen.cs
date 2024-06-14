@@ -49,20 +49,20 @@ namespace Cab_Managment_Service
                     availability = false;
                 }
 
-                Vehicle vehicle = new Vehicle(0, name, number, availability);
+                Car car = new Car(0, name, number, availability);
 
-                int newid = CarManagerClass.addCar(vehicle);
+                int newid = CarManagerClass.addCar(car);
                 if (newid >= 0)
                 {
                     MessageBox.Show("Car added successfully! Car ID: " + newid.ToString());
-                    vehicle.Vehicle_Id = newid;
+                    car.Car_Id = newid;
 
                 }
                 else
                 {
                     MessageBox.Show("Car does not added");
-                    //delete the object of the vehicle
-                    vehicle = (null);
+                    //delete the object of the car
+                    car = (null);
                 }
 
                 LoadCarData();
